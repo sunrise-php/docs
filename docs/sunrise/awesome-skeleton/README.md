@@ -2,6 +2,9 @@
 
 Awesome Skeleton for modern PHP 8.1+ development.
 
+![Downloads](https://img.shields.io/packagist/dt/sunrise/awesome-skeleton?style=social)
+![Stars](https://img.shields.io/github/stars/sunrise-php/awesome-skeleton?style=social)
+
 ## System Requirements
 
 PHP 8.1+
@@ -9,7 +12,7 @@ PHP 8.1+
 ## Installation
 
 ```bash
-composer create-project 'sunrise/awesome-skeleton:^4.0' awesome-app/
+composer create-project sunrise/awesome-skeleton awesome-app/
 ```
 
 > Don't forget to navigate to your new project’s directory.
@@ -28,6 +31,42 @@ php -S localhost:8000 public/index.php
 
 ![Screenshot](/media/greeting-screenshot.png)
 
+## Swagger
+
+The following command will describe all API methods in your project:
+
+```bash
+php bin/app router:openapi:build-document
+```
+
+By default, Swagger is available at the following address:
+
+http://localhost:8000/swagger.html
+
+> Note that by default, there are no API methods in the project, so Swagger will notify you about this, as shown in the screenshot below.
+
+![Screenshot](/media/swagger-screenshot.png)
+
+## CLI
+
+To access your project via the command line, use the following command:
+
+```bash
+php bin/app
+```
+
+The result of running this command should be something similar to the screenshot below.
+
+![Screenshot](/media/cli-screenshot.png)
+
+## Testing
+
+To run the tests, use the following command:
+
+```bash
+composer test
+```
+
 ## Dependencies
 
 Your new project will be based on the following open-source solutions:
@@ -42,3 +81,10 @@ Your new project will be based on the following open-source solutions:
 - [symfony/cache](https://packagist.org/packages/symfony/cache)
 - [symfony/console](https://packagist.org/packages/symfony/console)
 - [symfony/dotenv](https://packagist.org/packages/symfony/dotenv)
+
+The development environment will also use the following open-source solutions:
+
+- [phpstan/phpstan](https://packagist.org/packages/phpstan/phpstan)
+- [phpunit/phpunit](https://packagist.org/packages/phpunit/phpunit)
+- [squizlabs/php_codesniffer](https://packagist.org/packages/squizlabs/php_codesniffer)
+- [vimeo/psalm](https://packagist.org/packages/vimeo/psalm)

@@ -12,6 +12,9 @@
   <script>
     window.$docsify = {
       loadSidebar: true,
+      requestHeaders: {
+        'cache-control': 'max-age=0',
+      },
       routerMode: 'history',
       subMaxLevel: 2,
       themeColor: 'rgb(220,98,52)',

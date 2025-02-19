@@ -1,3 +1,4 @@
+* [Home](/)
 * [sunrise/awesome-skeleton](/docs/sunrise/awesome-skeleton/)
 * [sunrise/coder](/docs/sunrise/coder/)
 * [sunrise/http-client-curl](/docs/sunrise/http-client-curl/)

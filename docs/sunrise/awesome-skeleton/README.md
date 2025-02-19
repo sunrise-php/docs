@@ -24,6 +24,6 @@ cd awesome-app/
 php -S localhost:8000 public/index.php
 ```
 
-> You should see a **localized** greeting in the response after running the project.
+> You should see a greeting in the response based on your locale, as determined by the Accept-Language header, after running the project.
 
 ![Screenshot](/media/greeting-screenshot.png)

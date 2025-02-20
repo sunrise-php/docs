@@ -5,6 +5,8 @@ Awesome Skeleton for modern PHP 8.1+ development.
 ![Downloads](https://img.shields.io/packagist/dt/sunrise/awesome-skeleton?style=social)
 ![Stars](https://img.shields.io/github/stars/sunrise-php/awesome-skeleton?style=social)
 
+> **Important**: Awesome Skeleton is based on the [PHP-DI](https://php-di.org/) container. Study it to better understand your project.
+
 ## System Requirements
 
 PHP 8.1+
@@ -15,7 +17,7 @@ PHP 8.1+
 composer create-project sunrise/awesome-skeleton awesome-app/
 ```
 
-> Don't forget to navigate to your new project’s directory.
+> Do not forget to navigate to your project’s directory.
 
 ```bash
 cd awesome-app/
@@ -27,7 +29,11 @@ cd awesome-app/
 php -S localhost:8000 public/index.php
 ```
 
-> You should see a greeting in the response based on your locale, as determined by the Accept-Language header, after running the project.
+By default, your project is available at the following address:
+
+http://localhost:8000/
+
+> When you open your project in the browser, you will see a localized greeting based on your locale, as shown in the screenshot below.
 
 ![Screenshot](/media/greeting-screenshot.png)
 
@@ -43,7 +49,7 @@ By default, Swagger is available at the following address:
 
 http://localhost:8000/swagger.html
 
-> Note that by default, there are no API methods in the project, so Swagger will notify you about this, as shown in the screenshot below.
+> By default, your project does not include any API methods, so Swagger will notify you about this, as shown in the screenshot below.
 
 ![Screenshot](/media/swagger-screenshot.png)
 
@@ -55,7 +61,7 @@ To access your project via the command line, use the following command:
 php bin/app
 ```
 
-The result of running this command should be something similar to the screenshot below.
+The result of running this command should look similar to the screenshot below:
 
 ![Screenshot](/media/cli-screenshot.png)
 
@@ -67,9 +73,14 @@ To run the tests, use the following command:
 composer test
 ```
 
+## Production
+
+- Configure the cache in `config/definitions/prod/cache.php`;
+- Define the environment variable `APP_ENV=prod` in the `.env` file in the production environment.
+
 ## Dependencies
 
-Your new project will be based on the following open-source solutions:
+Your project will be based on the following open-source solutions:
 
 - [monolog/monolog](https://packagist.org/packages/monolog/monolog)
 - [php-di/php-di](https://packagist.org/packages/php-di/php-di)

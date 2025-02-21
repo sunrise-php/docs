@@ -1,5 +1,8 @@
-# Translator
+# sunrise/translator
 
+A flexible translation manager.
+
+![PHP](https://img.shields.io/packagist/dependency-v/sunrise/translator/php?style=social&logo=php&label=PHP)
 ![Coverage](https://img.shields.io/scrutinizer/coverage/g/sunrise-php/translator?style=social)
 ![Code quality](https://img.shields.io/scrutinizer/quality/g/sunrise-php/translator?style=social)
 ![Downloads](https://img.shields.io/packagist/dt/sunrise/translator?style=social)

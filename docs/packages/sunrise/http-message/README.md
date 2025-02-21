@@ -1,7 +1,8 @@
-# HTTP Message
+# sunrise/http-message
 
-Implementation of PSR-7 and PSR-17 standards.
+An HTTP message implementation based on RFC-7230, PSR-7 and PSR-17.
 
+![PHP](https://img.shields.io/packagist/dependency-v/sunrise/http-message/php?style=social&logo=php&label=PHP)
 ![Coverage](https://img.shields.io/scrutinizer/coverage/g/sunrise-php/http-message?style=social)
 ![Code quality](https://img.shields.io/scrutinizer/quality/g/sunrise-php/http-message?style=social)
 ![Downloads](https://img.shields.io/packagist/dt/sunrise/http-message?style=social)

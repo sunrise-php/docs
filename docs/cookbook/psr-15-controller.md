@@ -1,1 +1,27 @@
 # PSR-15 Controller
+
+```php
+declare(strict_types=1);
+
+namespace App\Controller\Api;
+
+use Psr\Http\Message\ResponseFactoryInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+use Sunrise\Http\Router\Annotation\GetRoute;
+
+#[GetRoute('test', '/test')]
+final class TestController implements RequestHandlerInterface
+{
+    public function __construct(
+        private readonly ResponseFactoryInterface $responseFactory,
+    ) {
+    }
+
+    public function handle(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->responseFactory->createResponse();
+    }
+}
+```

@@ -81,7 +81,7 @@ If you open your project in a browser, you should see a **localized** welcome me
 
 ## Swagger
 
-The following command will generate the OpenAPI documentation for all API methods in your project:
+The following command will generate the OpenAPI documentation for all API operations in your project:
 
 ```bash
 php bin/app router:openapi:build-document
@@ -91,8 +91,8 @@ Swagger should be available at the following address:
 
 http://localhost:8000/swagger.html
 
-> **Note**: By default, your project does not include any API methods, so Swagger will notify you about this.
-> To see at least something in Swagger, you can [create your first API method](/docs/cookbook/user-api/create-user.md) right away.
+> **Note**: By default, your project does not include any API operations, so Swagger will notify you about this.
+> To see at least something in Swagger, you can [create your first API operation](/docs/cookbook/user-api/create-user.md) right away.
 
 ![Screenshot](media/swagger-screenshot.png)
 
@@ -124,7 +124,7 @@ Make sure to configure the cache in:
 config/definitions/prod/cache.php
 ```
 
-Don't forget to change the environment variable `APP_ENV` in `.env` to:
+Don't forget to change the environment variable `APP_ENV` in the `.env` to:
 
 ```ini
 APP_ENV=prod
@@ -138,7 +138,7 @@ php bin/app router:clear-descriptors-cache
 
 ## What's next?
 
-- [Create your first API method](/docs/cookbook/user-api/create-user.md)
+- [Create your first API operation](/docs/cookbook/user-api/create-user.md)
 
 ## Dependencies
 

@@ -322,6 +322,22 @@ Recommended location: `config/definitions/hydrator.php`
 
 Expected data type: `array<string, mixed>`
 
+### hydrator.context.timestamp_format
+
+Part of the package: [sunrise/hydrator](/docs/packages/sunrise/hydrator/)
+
+Recommended location: `config/definitions/hydrator.php`
+
+Expected data type: `string`
+
+### hydrator.context.timezone_identifier
+
+Part of the package: [sunrise/hydrator](/docs/packages/sunrise/hydrator/)
+
+Recommended location: `config/definitions/hydrator.php`
+
+Expected data type: `string`
+
 ### hydrator.map_entity_type_converter.default_entity_manager_name
 
 Part of the package: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)

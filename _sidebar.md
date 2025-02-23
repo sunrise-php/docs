@@ -10,6 +10,7 @@
   * [sunrise/translator](/docs/packages/sunrise/translator/)
   * [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 * **Reference** 📖
+  * [Parameters](/docs/reference/parameters.md)
   * [Router Annotations](/docs/reference/router-annotations.md)
 * **Cookbook** 📚
   * User API

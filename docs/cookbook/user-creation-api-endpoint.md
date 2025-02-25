@@ -1,12 +1,10 @@
-# Create User
+# Creating the User Creation API Endpoint
 
 ## Request DTO
 
-Create a request DTO:
+> 💡 **Tip**: If you're using PHP 8.2+, always define DTOs as a [readonly class](https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.class.readonly).
 
-> **Note**: If you're using PHP 8.2+, always define DTOs as a [readonly class](https://www.php.net/manual/en/language.oop5.basic.php#language.oop5.basic.class.readonly).
-
-> **Note**: If you're using PHP 8.2+, always mark sensitive parameters with #[[SensitiveParameter](https://www.php.net/manual/en/class.sensitiveparameter.php)].
+> 💡 **Tip**: If you're using PHP 8.2+, always mark sensitive parameters with #[[SensitiveParameter](https://www.php.net/manual/en/class.sensitiveparameter.php)].
 
 ```php
 declare(strict_types=1);
@@ -25,9 +23,7 @@ final class CreateUserRequest
 
 ## Controller
 
-Create a controller:
-
-> **Note**: Check the [reference for annotations](/docs/reference/router-annotations.md) to learn more about each one.
+> 💡 **Tip**:: Check the [reference for annotations](/docs/reference/controller-annotations.md) to learn more about each one.
 
 ```php
 
@@ -53,8 +49,6 @@ final class UserController
 
 ## cURL
 
-Test the result:
-
 ```bash
 curl -i -X POST -H 'Content-Type: application/json' -d '{"email":"foo@example.com","password":"P@$$w0rD"}' http://localhost:8000/api/users
 ```
@@ -74,4 +68,4 @@ X-Powered-By: PHP/8.4.3
 php bin/app router:openapi:build-document
 ```
 
-![Screenshot](media/create-user-swagger-screenshot.png)
+![Screenshot](media/user-creation-api-endpoint-swagger-screenshot.png)

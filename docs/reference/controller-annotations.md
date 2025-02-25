@@ -1,8 +1,6 @@
-# Router Annotations
+# Controller Annotation Reference
 
 ## ApiRoute
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an API operation.
 
@@ -20,8 +18,6 @@ public function example(): void
 ```
 
 ## Constraint
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets constraints on action parameters, for example, they can be validated using Symfony Validator Constraints.
 
@@ -43,8 +39,6 @@ public function example(
 
 ## Consumes
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets the media type(s) consumed by an operation.
 
 > 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
@@ -65,8 +59,6 @@ public function create(
 
 ## DefaultAttribute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets the default value for a request attribute.
 
 > 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
@@ -85,8 +77,6 @@ public function list(
 
 ## DeleteApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `DELETE` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -99,8 +89,6 @@ public function example(): void
 ```
 
 ## DeleteMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `DELETE` HTTP method for an operation.
 
@@ -117,8 +105,6 @@ public function example(): void
 
 ## DeleteRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `DELETE` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -131,8 +117,6 @@ public function example(): void
 ```
 
 ## Deprecated
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Marks an operation as deprecated.
 
@@ -148,8 +132,6 @@ public function example(): void
 ```
 
 ## Description
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the description for an operation.
 
@@ -167,8 +149,6 @@ public function example(): void
 ```
 
 ## EncodableResponse
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Specifies to encode views returned directly from an operation.
 
@@ -194,8 +174,6 @@ public function read(#[RequestVariable] int $id): UserView
 
 ## GetApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `GET` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -208,8 +186,6 @@ public function example(): void
 ```
 
 ## GetMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `GET` HTTP method for an operation.
 
@@ -226,8 +202,6 @@ public function example(): void
 
 ## GetRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `GET` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -241,8 +215,6 @@ public function example(): void
 
 ## HeadApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `HEAD` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -255,8 +227,6 @@ public function example(): void
 ```
 
 ## HeadMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `HEAD` HTTP method for an operation.
 
@@ -273,8 +243,6 @@ public function example(): void
 
 ## HeadRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `HEAD` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -287,8 +255,6 @@ public function example(): void
 ```
 
 ## Method
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the HTTP method(s) for an operation.
 
@@ -306,8 +272,6 @@ public function example(): void
 ```
 
 ## Middleware
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets middleware(s) for an operation.
 
@@ -342,8 +306,6 @@ public function example(): void
 
 ## NamePrefix
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets a prefix for an operation name.
 
 > 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
@@ -365,8 +327,6 @@ final class ExampleController
 ```
 
 ## Operation
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Allows you to manually document an operation.
 
@@ -391,8 +351,6 @@ public function example(): void
 
 ## OptionsApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an `OPTIONS` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -405,8 +363,6 @@ public function example(): void
 ```
 
 ## OptionsMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `OPTIONS` HTTP method for an operation.
 
@@ -423,8 +379,6 @@ public function example(): void
 
 ## OptionsRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an `OPTIONS` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -438,8 +392,6 @@ public function example(): void
 
 ## PatchApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PATCH` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -452,8 +404,6 @@ public function example(): void
 ```
 
 ## PatchMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `PATCH` HTTP method for an operation.
 
@@ -470,8 +420,6 @@ public function example(): void
 
 ## PatchRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PATCH` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -484,8 +432,6 @@ public function example(): void
 ```
 
 ## PathPostfix
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets a postfix for an operation path.
 
@@ -509,8 +455,6 @@ final class ExampleController
 
 ## PathPrefix
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets a prefix for an operation path.
 
 > 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
@@ -532,8 +476,6 @@ final class ExampleController
 ```
 
 ## Pattern
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets a pattern for a route variable.
 
@@ -557,8 +499,6 @@ public function read(#[RequestVariable] int $id): void
 
 ## PostApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `POST` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -571,8 +511,6 @@ public function example(): void
 ```
 
 ## PostMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `POST` HTTP method for an operation.
 
@@ -589,8 +527,6 @@ public function example(): void
 
 ## PostRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `POST` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -603,8 +539,6 @@ public function example(): void
 ```
 
 ## Priority
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the priority for a route.
 
@@ -627,8 +561,6 @@ public function example(): void
 
 ## Produces
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets the media type(s) produced by an operation.
 
 > 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
@@ -649,8 +581,6 @@ public function read(#[RequestVariable] int $id): UserView
 
 ## PurgeApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PURGE` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -663,8 +593,6 @@ public function example(): void
 ```
 
 ## PurgeMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `PURGE` HTTP method for an operation.
 
@@ -681,8 +609,6 @@ public function example(): void
 
 ## PurgeRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PURGE` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -696,8 +622,6 @@ public function example(): void
 
 ## PutApiRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PUT` API operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -710,8 +634,6 @@ public function example(): void
 ```
 
 ## PutMethod
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets the `PUT` HTTP method for an operation.
 
@@ -728,8 +650,6 @@ public function example(): void
 
 ## PutRoute
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PUT` operation.
 
 > 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -742,8 +662,6 @@ public function example(): void
 ```
 
 ## RequestBody
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Used to bind a request body to an operation parameter.
 
@@ -771,8 +689,6 @@ public function create(
 
 ## RequestCookie
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Used to bind a request cookie to an operation parameter.
 
 > 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
@@ -782,6 +698,8 @@ Used to bind a request cookie to an operation parameter.
 > 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+
+> 💡 **Tip**: If the cookie is optional, simply assign a default value to the parameter, for example, `null`.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -793,8 +711,6 @@ public function example(#[RequestCookie('foo')] string $foo): void
 
 ## RequestHeader
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Used to bind a request header to an operation parameter.
 
 > 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_header_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
@@ -805,6 +721,8 @@ Used to bind a request header to an operation parameter.
 
 > 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_header_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
+> 💡 **Tip**: If the header is optional, simply assign a default value to the parameter, for example, `null`.
+
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\RequestHeader;
@@ -814,8 +732,6 @@ public function example(#[RequestHeader('X-Foo')] string $foo): void
 ```
 
 ## RequestQuery
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Used to bind a request query to an operation parameter.
 
@@ -838,9 +754,9 @@ public function list(#[RequestQuery] UserSearchRequest $userSearchRequest): void
 
 ## RequestVariable
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Used to bind a route variable to an operation parameter.
+
+> 💡 **Tip**: By default, the route variable name can be omitted, as the action parameter name will be used. If they don't match, you can specify the route variable name using the `name` parameter of the attribute.
 
 > 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
@@ -849,6 +765,8 @@ Used to bind a route variable to an operation parameter.
 > 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+
+> 💡 **Tip**: If the variable is optional, simply assign a default value to the parameter, for example, `null`.
 
 ```php
 use App\Dictionary\MediaType;
@@ -866,7 +784,7 @@ public function read(#[RequestVariable] int $id): UserView
 
 ## RequestedEntity
 
-Part of the package: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 
 Used to bind a requested entity to an operation's parameter.
 
@@ -897,8 +815,6 @@ public function read(#[RequestedEntity] User $user): UserView
 
 ## ResponseHeader
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets a response header.
 
 ```php
@@ -911,8 +827,6 @@ public function example(): void
 ```
 
 ## ResponseStatus
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Sets a response status.
 
@@ -937,8 +851,6 @@ public function create(
 
 ## Route
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an operation.
 
 > 💡 **Tip**: You may want to use one of the following annotations: [DeleteRoute](#deleteroute), [GetRoute](#getroute), [HeadRoute](#headroute), [OptionsRoute](#optionsroute), [PatchRoute](#patchroute), [PatchRoute](#patchroute), [PostRoute](#postroute), [PurgeRoute](#purgeroute), [PutRoute](#putroute).
@@ -956,8 +868,6 @@ public function example(): void
 
 ## Summary
 
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
-
 Sets the summary for an operation
 
 > 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
@@ -974,8 +884,6 @@ public function example(): void
 ```
 
 ## Tag
-
-Part of the package: [sunrise/http-router](/docs/packages/sunrise/http-router/)
 
 Adds tag(s) for an operation.
 

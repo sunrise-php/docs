@@ -4,11 +4,11 @@
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an API operation.
 
-> 💡 **Tip**: You may want to use one of the following annotations: [DeleteApiRoute](#deleteapiroute), [GetApiRoute](#getapiroute), [HeadApiRoute](#headapiroute), [OptionsApiRoute](#optionsapiroute), [PatchApiRoute](#patchapiroute), [PatchApiRoute](#patchapiroute), [PostApiRoute](#postapiroute), [PurgeApiRoute](#purgeapiroute), [PutApiRoute](#putapiroute).
+> You may want to use one of the following annotations: [DeleteApiRoute](#deleteapiroute), [GetApiRoute](#getapiroute), [HeadApiRoute](#headapiroute), [OptionsApiRoute](#optionsapiroute), [PatchApiRoute](#patchapiroute), [PatchApiRoute](#patchapiroute), [PostApiRoute](#postapiroute), [PurgeApiRoute](#purgeapiroute), [PutApiRoute](#putapiroute).
 
-> 💡 **Tip**: The following annotations may be useful for you: [Method](#method), [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [Method](#method), [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
-> 💡 **Tip**: Pay attention to the `ApiRoute::METHOD_*` annotation constants.
+> Pay attention to the `ApiRoute::METHOD_*` annotation constants.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -21,7 +21,7 @@ public function example(): void
 
 Sets constraints on action parameters, for example, they can be validated using Symfony Validator Constraints.
 
-> 💡 **Tip**: This annotation works out-of-the-box with the following annotations: [RequestCookie](#RequestCookie), [RequestHeader](#RequestHeader), [RequestVariable](#RequestVariable).
+> This annotation works out-of-the-box with the following annotations: [RequestCookie](#RequestCookie), [RequestHeader](#RequestHeader), [RequestVariable](#RequestVariable).
 
 ```php
 use Sunrise\Http\Router\Annotation\Constraint;
@@ -39,9 +39,9 @@ public function example(
 
 ## Consumes
 
-Sets the media type(s) consumed by an operation.
+Sets a media type(s) consumed by an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use App\Dictionary\MediaType;
@@ -59,9 +59,9 @@ public function create(
 
 ## DefaultAttribute
 
-Sets the default value for a request attribute.
+Sets a default value for a request attribute.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\DefaultAttribute;
@@ -79,7 +79,7 @@ public function list(
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `DELETE` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\DeleteApiRoute;
@@ -92,7 +92,7 @@ public function example(): void
 
 Sets the `DELETE` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -107,7 +107,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `DELETE` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\DeleteRoute;
@@ -120,7 +120,7 @@ public function example(): void
 
 Marks an operation as deprecated.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\Deprecated;
@@ -133,11 +133,11 @@ public function example(): void
 
 ## Description
 
-Sets the description for an operation.
+Sets a description for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Use multiple annotations if the description is too long, and the router will combine them into one.
+> Use multiple annotations if the description is too long, and the router will combine them into one.
 
 ```php
 use Sunrise\Http\Router\Annotation\Description;
@@ -152,11 +152,11 @@ public function example(): void
 
 Specifies to encode views returned directly from an operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [ResponseStatus](#responsestatus).
+> The following annotations may be useful for you: [ResponseStatus](#responsestatus).
 
-> 💡 **Tip**: If you need to override the [default media type](/docs/reference/parameters.md#routerencodable_response_resolverdefault_media_type), set it using the `defaultMediaType` parameter of the annotation.
+> If you need to override the [default media type](/docs/reference/app-parameters.md#router_encodable_response_resolver_default_media_type), set it using the `defaultMediaType` parameter of the annotation.
 
-> 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerencodable_response_resolvercodec_context) to the [encoder](/docs/packages/sunrise/coder/), set it through the `codecContext` parameter of the annotation.
+> If you need to pass [additional context](/docs/reference/app-parameters.md#router_encodable_response_resolver_codec_context) to the [encoder](/docs/packages/sunrise/coder/), set it through the `codecContext` parameter of the annotation.
 
 ```php
 use App\Dictionary\MediaType;
@@ -176,7 +176,7 @@ public function read(#[RequestVariable] int $id): UserView
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `GET` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -189,7 +189,7 @@ public function example(): void
 
 Sets the `GET` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -204,7 +204,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `GET` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\GetRoute;
@@ -217,7 +217,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `HEAD` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\HeadApiRoute;
@@ -230,7 +230,7 @@ public function example(): void
 
 Sets the `HEAD` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -245,7 +245,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `HEAD` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\HeadRoute;
@@ -256,11 +256,11 @@ public function example(): void
 
 ## Method
 
-Sets the HTTP method(s) for an operation.
+Sets a HTTP method(s) for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Pay attention to the `Method::METHOD_*` constants.
+> Pay attention to the `Method::METHOD_*` constants.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -275,9 +275,9 @@ public function example(): void
 
 Sets middleware(s) for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: A reference to middleware can be an [FQN class name](#middleware-in-the-form-of-an-fqn-class-name) or a [callable notation](#middleware-in-the-form-of-a-callable-notation).
+> A reference to middleware can be an [FQN class name](#middleware-in-the-form-of-an-fqn-class-name) or a [callable notation](#middleware-in-the-form-of-a-callable-notation).
 
 ### Middleware in the form of an FQN class name
 
@@ -293,7 +293,7 @@ public function example(): void
 
 ### Middleware in the form of a callable notation
 
-> 💡 **Tip**: Note that middleware can be part of your controller. This can sometimes be useful, but **avoid overusing it**.
+> Note that the middleware can be part of the controller.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -308,9 +308,9 @@ public function example(): void
 
 Sets a prefix for an operation name.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Think twice before using this annotation in your project. It may lead to confusion when a QA engineer, front-end developer, or another team member asks about an operation. Instead of easily searching for the controller, you might end up unraveling a web of annotations. **Overusing this annotation can potentially cause more harm than good**.
+> Think twice before using this annotation in your project. It may lead to confusion when a QA engineer, front-end developer, or another team member asks about an operation. Instead of easily searching for the controller, you might end up unraveling a web of annotations. **Overusing this annotation can potentially cause more harm than good**.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -330,11 +330,9 @@ final class ExampleController
 
 Allows you to manually document an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip:** If you need to set a global rule, it's better to use the [router.openapi.initial_document](/docs/reference/parameters.md#routeropenapiinitial_document) parameter.
-
-> ❗ **Important**: Do not overuse this annotation.
+> If you need to set a global rule, it's better to use the [router.openapi.initial_document](/docs/reference/app-parameters.md#router_openapi_initial_document) parameter.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -353,7 +351,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an `OPTIONS` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\OptionsApiRoute;
@@ -366,7 +364,7 @@ public function example(): void
 
 Sets the `OPTIONS` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -381,7 +379,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an `OPTIONS` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\OptionsRoute;
@@ -394,7 +392,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PATCH` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PatchApiRoute;
@@ -407,7 +405,7 @@ public function example(): void
 
 Sets the `PATCH` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -422,7 +420,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PATCH` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PatchRoute;
@@ -435,9 +433,9 @@ public function example(): void
 
 Sets a postfix for an operation path.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Think twice before using this annotation in your project. It may lead to confusion when a QA engineer, front-end developer, or another team member asks about an operation. Instead of easily searching for the controller, you might end up unraveling a web of annotations. **Overusing this annotation can potentially cause more harm than good**.
+> Think twice before using this annotation in your project. It may lead to confusion when a QA engineer, front-end developer, or another team member asks about an operation. Instead of easily searching for the controller, you might end up unraveling a web of annotations. **Overusing this annotation can potentially cause more harm than good**.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -457,9 +455,9 @@ final class ExampleController
 
 Sets a prefix for an operation path.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Think twice before using this annotation in your project. It may lead to confusion when a QA engineer, front-end developer, or another team member asks about an operation. Instead of easily searching for the controller, you might end up unraveling a web of annotations. **Overusing this annotation can potentially cause more harm than good**.
+> Think twice before using this annotation in your project. It may lead to confusion when a QA engineer, front-end developer, or another team member asks about an operation. Instead of easily searching for the controller, you might end up unraveling a web of annotations. **Overusing this annotation can potentially cause more harm than good**.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -479,13 +477,13 @@ final class ExampleController
 
 Sets a pattern for a route variable.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+**Expects not a regex, but a subpattern, i.e., an expression without delimiters and modifiers.**
 
-> 💡 **Tip**: You can also specify the pattern directly in the route – `{id<\d+>}`.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Pay attention to the `\Sunrise\Http\Router\Dictionary\VariablePattern` dictionary.
+> You can also specify the pattern directly in the route – `{id<\d+>}`.
 
-> ❗ **Important**: Specify not a Regular Expression, but a subpattern, i.e., an expression without delimiters and modifiers.
+> Pay attention to the `\Sunrise\Http\Router\Dictionary\VariablePattern` dictionary.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -501,7 +499,7 @@ public function read(#[RequestVariable] int $id): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `POST` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PostApiRoute;
@@ -514,7 +512,7 @@ public function example(): void
 
 Sets the `POST` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -529,7 +527,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `POST` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PostRoute;
@@ -540,15 +538,13 @@ public function example(): void
 
 ## Priority
 
-Sets the priority for a route.
+Sets a priority for a route.
 
 This rare annotation is used to assign a priority to a route. Avoid using it within a single project. It is intended for extending the router's functionality, such as when a provider supplies routes and you need to override them in your project.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: This annotation allows you to override Swagger and OpenAPI document routes.
-
-> ❗ **Important**: Do not overuse this annotation.
+> This annotation allows you to override Swagger and OpenAPI document routes.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -561,9 +557,9 @@ public function example(): void
 
 ## Produces
 
-Sets the media type(s) produced by an operation.
+Sets a media type(s) produced by an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use App\Dictionary\MediaType;
@@ -583,7 +579,7 @@ public function read(#[RequestVariable] int $id): UserView
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PURGE` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PurgeApiRoute;
@@ -596,7 +592,7 @@ public function example(): void
 
 Sets the `PURGE` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -611,7 +607,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PURGE` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PurgeRoute;
@@ -624,7 +620,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PUT` API operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PutApiRoute;
@@ -637,7 +633,7 @@ public function example(): void
 
 Sets the `PUT` HTTP method for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\ApiRoute;
@@ -652,7 +648,7 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PUT` operation.
 
-> 💡 **Tip**: The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
 use Sunrise\Http\Router\Annotation\PutRoute;
@@ -665,13 +661,15 @@ public function example(): void
 
 Used to bind a request body to an operation parameter.
 
-> 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_body_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
+> If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
-> 💡 **Tip**: If you need to override the [default error message](/docs/reference/parameters.md#routerrequest_body_parameter_resolverdefault_error_message), set it in the `errorMessage` parameter of the annotation.
+> If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_body_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
-> 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_body_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+> If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+
+> We recommend reviewing the [type conversion system](/docs/reference/type-conversion.md) to better understand the binding process.
 
 ```php
 use App\Dictionary\MediaType;
@@ -691,15 +689,17 @@ public function create(
 
 Used to bind a request cookie to an operation parameter.
 
-> 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
+> If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
-> 💡 **Tip**: If you need to override the [default error message](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverdefault_error_message), set it in the `errorMessage` parameter of the annotation.
+> If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
-> 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_cookie_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+> If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
-> 💡 **Tip**: If the cookie is optional, simply assign a default value to the parameter, for example, `null`.
+> If the cookie is optional, simply assign a default value to the parameter, for example, `null`.
+
+> We recommend reviewing the [type conversion system](/docs/reference/type-conversion.md) to better understand the binding process.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -713,15 +713,17 @@ public function example(#[RequestCookie('foo')] string $foo): void
 
 Used to bind a request header to an operation parameter.
 
-> 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_header_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
+> If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
-> 💡 **Tip**: If you need to override the [default error message](/docs/reference/parameters.md#routerrequest_header_parameter_resolverdefault_error_message), set it in the `errorMessage` parameter of the annotation.
+> If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_header_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
-> 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_header_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+> If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
-> 💡 **Tip**: If the header is optional, simply assign a default value to the parameter, for example, `null`.
+> If the header is optional, simply assign a default value to the parameter, for example, `null`.
+
+> We recommend reviewing the [type conversion system](/docs/reference/type-conversion.md) to better understand the binding process.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -735,13 +737,15 @@ public function example(#[RequestHeader('X-Foo')] string $foo): void
 
 Used to bind a request query to an operation parameter.
 
-> 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_query_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
+> If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
-> 💡 **Tip**: If you need to override the [default error message](/docs/reference/parameters.md#routerrequest_query_parameter_resolverdefault_error_message), set it in the `errorMessage` parameter of the annotation.
+> If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_query_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
-> 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_query_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+> If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+
+> We recommend reviewing the [type conversion system](/docs/reference/type-conversion.md) to better understand the binding process.
 
 ```php
 use App\Dto\User\UserSearchRequest;
@@ -756,17 +760,19 @@ public function list(#[RequestQuery] UserSearchRequest $userSearchRequest): void
 
 Used to bind a route variable to an operation parameter.
 
-> 💡 **Tip**: By default, the route variable name can be omitted, as the action parameter name will be used. If they don't match, you can specify the route variable name using the `name` parameter of the attribute.
+> By default, the route variable name can be omitted, as the action parameter name will be used. If they don't match, you can specify the route variable name using the `name` parameter of the annotation.
 
-> 💡 **Tip**: If you need to override the [default error status code](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverdefault_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
+> If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
-> 💡 **Tip**: If you need to override the [default error message](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverdefault_error_message), set it in the `errorMessage` parameter of the annotation.
+> If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> 💡 **Tip**: If you need to pass [additional context](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverhydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
-> 💡 **Tip:** If you need to change the [default validator activity](/docs/reference/parameters.md#routerrequest_variable_parameter_resolverdefault_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
+> If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
-> 💡 **Tip**: If the variable is optional, simply assign a default value to the parameter, for example, `null`.
+> If the variable is optional, simply assign a default value to the parameter, for example, `null`.
+
+> We recommend reviewing the [type conversion system](/docs/reference/type-conversion.md) to better understand the binding process.
 
 ```php
 use App\Dictionary\MediaType;
@@ -790,13 +796,13 @@ Used to bind a requested entity to an operation's parameter.
 
 By default, it expects a variable in the route with the same name as the entity's identifier field. In other words, if the entity's identifier field is named `id`, then the variable in the route should be named `{id}` as well.
 
-> 💡 **Tip**: To change the name of the field used to find the entity, set it in the `field` parameter of the annotation. However, keep in mind that a route variable with the same name will also be expected.
+> To change the name of the field used to find the entity, set it in the `field` parameter of the annotation. However, keep in mind that a route variable with the same name will also be expected.
 
-> 💡 **Tip**: To change the name of the variable whose value will be used to find the entity, set it in the `variable` parameter of the annotation.
+> To change the name of the variable whose value will be used to find the entity, set it in the `variable` parameter of the annotation.
 
-> 💡 **Tip**: To pass additional search criteria, set them in the `criteria` parameter of the annotation.
+> To pass additional search criteria, set them in the `criteria` parameter of the annotation.
 
-> 💡 **Tip**: To change the [default entity manager](/docs/reference/parameters.md#routerrequested_entity_parameter_resolverdefault_entity_manager_name), set the name of the required entity manager in the `em` parameter of the annotation.
+> To change the [default entity manager](/docs/reference/app-parameters.md#router_requested_entity_parameter_resolver_default_entity_manager_name), set the name of the required entity manager in the `em` parameter of the annotation.
 
 ```php
 use App\Dictionary\MediaType;
@@ -830,7 +836,7 @@ public function example(): void
 
 Sets a response status.
 
-> 💡 **Tip**: Pay attention to the `ResponseStatus::STATUS_*` constants.
+> Pay attention to the `ResponseStatus::STATUS_*` constants.
 
 ```php
 use App\Dictionary\MediaType;
@@ -853,11 +859,11 @@ public function create(
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an operation.
 
-> 💡 **Tip**: You may want to use one of the following annotations: [DeleteRoute](#deleteroute), [GetRoute](#getroute), [HeadRoute](#headroute), [OptionsRoute](#optionsroute), [PatchRoute](#patchroute), [PatchRoute](#patchroute), [PostRoute](#postroute), [PurgeRoute](#purgeroute), [PutRoute](#putroute).
+> You may want to use one of the following annotations: [DeleteRoute](#deleteroute), [GetRoute](#getroute), [HeadRoute](#headroute), [OptionsRoute](#optionsroute), [PatchRoute](#patchroute), [PatchRoute](#patchroute), [PostRoute](#postroute), [PurgeRoute](#purgeroute), [PutRoute](#putroute).
 
-> 💡 **Tip**: The following annotations may be useful for you: [Method](#method), [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
+> The following annotations may be useful for you: [Method](#method), [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
-> 💡 **Tip**: Pay attention to the `Route::METHOD_*` annotation constants.
+> Pay attention to the `Route::METHOD_*` annotation constants.
 
 ```php
 use Sunrise\Http\Router\Annotation\Route;
@@ -868,11 +874,11 @@ public function example(): void
 
 ## Summary
 
-Sets the summary for an operation
+Sets a summary for an operation
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
-> 💡 **Tip**: Use multiple annotations if the summary is too long, and the router will combine them into one.
+> Use multiple annotations if the summary is too long, and the router will combine them into one.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;
@@ -887,7 +893,7 @@ public function example(): void
 
 Adds tag(s) for an operation.
 
-> 💡 **Tip**: This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 ```php
 use Sunrise\Http\Router\Annotation\GetApiRoute;

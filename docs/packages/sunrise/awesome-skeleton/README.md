@@ -6,7 +6,7 @@ An awesome skeleton for modern PHP development.
 ![Downloads](https://img.shields.io/packagist/dt/sunrise/awesome-skeleton?style=social)
 ![Stars](https://img.shields.io/github/stars/sunrise-php/awesome-skeleton?style=social)
 
-> **Important**: Awesome Skeleton is based on the [PHP-DI](https://php-di.org/) container. Study it to better understand your project.
+> Awesome Skeleton is based on the [PHP-DI](https://php-di.org/) container. Study it to better understand your project.
 
 ## Key Features
 
@@ -27,13 +27,13 @@ An awesome skeleton for modern PHP development.
 
 The following command will create a new project in the `awesome-app` directory:
 
-> **Note**: The directory name `awesome-app` is used for demonstration purposes. You should choose a more meaningful name.
+> The directory name `awesome-app` is used for demonstration purposes. You should choose a more meaningful name.
 
 ```bash
 composer create-project sunrise/awesome-skeleton awesome-app/
 ```
 
-> **Note**: Don't forget to navigate to your project's directory.
+> Don't forget to navigate to your project's directory.
 
 ```bash
 cd awesome-app/
@@ -43,9 +43,9 @@ cd awesome-app/
 
 The following command will run your project on the built-in PHP web server, which will be accessible at `localhost:8000`:
 
-> **Important**: [The built-in PHP web server](https://www.php.net/manual/en/features.commandline.webserver.php) **MUST** be used for demonstration purposes only.
+> [The built-in PHP web server](https://www.php.net/manual/en/features.commandline.webserver.php) **MUST** be used for demonstration purposes only.
 
-> **Note**: The address `localhost:8000` is used for demonstration purposes. You can use a different address.
+> The address `localhost:8000` is used for demonstration purposes. You can use a different address.
 
 ```bash
 php -S localhost:8000 public/index.php
@@ -59,9 +59,9 @@ _Now, let's check if the project works..._
 
 The following command will request the home page of your project using the cURL utility:
 
-> **Note**: You can request data from the server in a specific format and language using the `Accept` and `Accept-Language` headers.
+> You can request data from the server in a specific format and language using the `Accept` and `Accept-Language` headers.
 
-> **Note**: The [WelcomeController](https://github.com/sunrise-php/awesome-skeleton/blob/eb8d4bd6ae09394a9204b9e8edd3a67f9237b8a0/src/Controller/WelcomeController.php) is created for demonstration purposes. In API controllers, you won't have to manually determine the response format.
+> The [WelcomeController](https://github.com/sunrise-php/awesome-skeleton/blob/eb8d4bd6ae09394a9204b9e8edd3a67f9237b8a0/src/Controller/WelcomeController.php) is created for demonstration purposes. In API controllers, you won't have to manually determine the response format.
 
 ```bash
 curl -X GET -H 'accept: application/json' -H 'accept-language: ru' http://localhost:8000/
@@ -91,7 +91,7 @@ Swagger should be available at the following address:
 
 http://localhost:8000/swagger.html
 
-> **Note**: By default, your project does not include any API operations, so Swagger will notify you about this.
+> By default, your project does not include any API operations, so Swagger will notify you about this.
 > To see at least something in Swagger, you can [create your first API operation](/docs/cookbook/user-api/create-user.md) right away.
 
 ![Screenshot](media/swagger-screenshot.png)

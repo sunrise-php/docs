@@ -20,7 +20,7 @@ A powerful solution as the foundation of your project.
 
 ## Installation
 
-> **Important**: We refer to the router as "the foundation of your project" for a reason. Setting up the router with all its features can be complex, so we strongly recommend starting with [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), where everything is pre-configured. All further documentation assumes that the router is fully integrated into your project.
+> We refer to the router as "the foundation of your project" for a reason. Setting up the router with all its features can be complex, so we strongly recommend starting with [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), where everything is pre-configured. All further documentation assumes that the router is fully integrated into your project.
 
 ```bash
 composer require sunrise/http-router

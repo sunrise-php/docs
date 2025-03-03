@@ -9,28 +9,23 @@ declare(strict_types=1);
 namespace App\TypeConverter;
 
 use BcMath\Number;
-use Generator;
 use Sunrise\Hydrator\Exception\InvalidValueException;
 use Sunrise\Hydrator\Type;
 use Sunrise\Hydrator\TypeConverterInterface;
-use ValueError;
-
-use function is_string;
-use function trim;
 
 final readonly class MonetaryTypeConverter implements TypeConverterInterface
 {
-    public function castValue($value, Type $type, array $path, array $context): Generator
+    public function castValue($value, Type $type, array $path, array $context): \Generator
     {
         if ($type->getName() !== Number::class) {
             return;
         }
 
-        if (!is_string($value)) {
+        if (!\is_string($value)) {
             throw InvalidValueException::mustBeString($path, $value);
         }
 
-        $value = trim($value);
+        $value = \trim($value);
         if ($value === '') {
             // As part of supporting untyped data sources, empty strings should be considered as NULL.
             return $type->allowsNull() ? yield : throw InvalidValueException::mustNotBeEmpty($path, $value);
@@ -38,7 +33,7 @@ final readonly class MonetaryTypeConverter implements TypeConverterInterface
 
         try {
             yield new Number($value);
-        } catch (ValueError) {
+        } catch (\ValueError) {
             throw InvalidValueException::mustBeNumber($path, $value);
         }
     }

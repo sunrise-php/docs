@@ -1,4 +1,4 @@
-# sunrise/translator
+# sunrise/translator :id=top
 
 A flexible translation manager.
 

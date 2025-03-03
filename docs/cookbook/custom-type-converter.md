@@ -18,7 +18,7 @@ use ValueError;
 use function is_string;
 use function trim;
 
-final class MonetaryTypeConverter implements TypeConverterInterface
+final readonly class MonetaryTypeConverter implements TypeConverterInterface
 {
     public function castValue($value, Type $type, array $path, array $context): Generator
     {
@@ -71,5 +71,5 @@ return [
 Now you can use the new type in the project as follows:
 
 ```php
-public readonly \BcMath\Number $price;
+public readonly \BcMath\Number $price
 ```

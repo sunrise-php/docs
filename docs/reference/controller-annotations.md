@@ -317,7 +317,7 @@ use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\NamePrefix;
 
 #[NamePrefix('api.operations.')]
-final class ExampleController
+final readonly class ExampleController
 {
     #[GetApiRoute('example', '/api/operations/example')]
     public function example(): void
@@ -442,7 +442,7 @@ use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\PathPostfix;
 
 #[PathPostfix('.json')]
-final class ExampleController
+final readonly class ExampleController
 {
     #[GetApiRoute('api.operations.example', '/api/operations/example')]
     public function example(): void
@@ -464,7 +464,7 @@ use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\PathPrefix;
 
 #[PathPrefix('/api/operations')]
-final class ExampleController
+final readonly class ExampleController
 {
     #[GetApiRoute('api.operations.example', '/example')]
     public function example(): void

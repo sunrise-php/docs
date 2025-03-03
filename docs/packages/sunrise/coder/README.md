@@ -1,4 +1,6 @@
-# sunrise/coder
+[//]: # (TODO: Описать работу с контекстом)
+
+# sunrise/coder :id=top
 
 A flexible data coder for encoding and decoding formats like JSON, YAML, and more.
 
@@ -10,6 +12,38 @@ A flexible data coder for encoding and decoding formats like JSON, YAML, and mor
 
 ## Installation
 
+> If you're using [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), everything is already installed and configured for you.
+
 ```bash
 composer require sunrise/coder
+```
+
+## Quick Start
+
+```php
+use Sunrise\Coder\CodecManager;
+use Sunrise\Coder\Codec\JsonCodec;
+use Sunrise\Coder\Codec\UrlEncodedCodec;
+use Sunrise\Coder\Dictionary\MediaType;
+
+$codecManager = new CodecManager(codecs: [
+    new JsonCodec(),
+    new UrlEncodedCodec(),
+]);
+
+// Encoding result: {"foo": "bar"}
+$codecManager->encode(MediaType::JSON, ['foo' => 'bar']);
+// Decoding result: ['foo' => 'bar']
+$codecManager->decode(MediaType::JSON, '{"foo": "bar"}');
+
+// Encoding result: foo=bar
+$codecManager->encode(MediaType::UrlEncoded, ['foo' => 'bar']);
+// Decoding result: ['foo' => 'bar']
+$codecManager->decode(MediaType::UrlEncoded, 'foo=bar');
+```
+
+## Tests
+
+```bash
+composer test
 ```

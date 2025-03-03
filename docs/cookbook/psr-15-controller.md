@@ -8,10 +8,10 @@ use Psr\Http\Server\RequestHandlerInterface;
 use Sunrise\Http\Router\Annotation\GetRoute;
 
 #[GetRoute('example', '/example')]
-final class ExampleController implements RequestHandlerInterface
+final readonly class ExampleController implements RequestHandlerInterface
 {
     public function __construct(
-        private readonly ResponseFactoryInterface $responseFactory,
+        private ResponseFactoryInterface $responseFactory,
     ) {
     }
 

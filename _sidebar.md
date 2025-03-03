@@ -15,8 +15,8 @@
   * [Hydrator Annotations](/docs/reference/hydrator-annotations.md)
   * [Type Conversion](/docs/reference/type-conversion.md)
 * 📚 **Cookbook**
+  * [API Endpoint for Creating a User](/docs/cookbook/api-endpoint-for-creating-user.md)
   * [Custom Type Converter](/docs/cookbook/custom-type-converter.md)
   * [PSR-15 Controller](/docs/cookbook/psr-15-controller.md)
   * [PSR-15 Middleware](/docs/cookbook/psr-15-middleware.md)
   * [Typed Collection](/docs/cookbook/typed-collection.md)
-  * [User Creation API Endpoint](/docs/cookbook/user-creation-api-endpoint.md)

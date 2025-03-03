@@ -1,4 +1,4 @@
-# sunrise/recaptcha
+# sunrise/recaptcha :id=top
 
 Google reCAPTCHA client.
 

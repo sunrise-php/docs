@@ -1,4 +1,4 @@
-# sunrise/hydrator
+# sunrise/hydrator :id=top
 
 A flexible strictly-typed hydrator.
 
@@ -10,6 +10,25 @@ A flexible strictly-typed hydrator.
 
 ## Installation
 
+> If you're using [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), everything is already installed and configured for you.
+
 ```bash
 composer require sunrise/hydrator
+```
+
+## Quick Start
+
+### Object Hydration
+
+```php
+$hydrator = new \Sunrise\Hydrator\Hydrator();
+$object = $hydrator->hydrate(Object::class, $data);
+```
+
+### Value Type Casting
+
+```php
+$hydrator = new \Sunrise\Hydrator\Hydrator();
+$type = \Sunrise\Hydrator\Type::fromName('string');
+$value = $hydrator->castValue($value, $type);
 ```

@@ -1,4 +1,4 @@
-# sunrise/awesome-skeleton
+# sunrise/awesome-skeleton :id=top
 
 An awesome skeleton for modern PHP development.
 
@@ -33,7 +33,7 @@ The following command will create a new project in the `awesome-app` directory:
 composer create-project sunrise/awesome-skeleton awesome-app/
 ```
 
-> Don't forget to navigate to your project's directory.
+Don't forget to navigate to your project's directory as follows:
 
 ```bash
 cd awesome-app/
@@ -43,7 +43,7 @@ cd awesome-app/
 
 The following command will run your project on the built-in PHP web server, which will be accessible at `localhost:8000`:
 
-> [The built-in PHP web server](https://www.php.net/manual/en/features.commandline.webserver.php) **MUST** be used for demonstration purposes only.
+> The [built-in PHP web server](https://www.php.net/manual/en/features.commandline.webserver.php) must be used for demonstration purposes only.
 
 > The address `localhost:8000` is used for demonstration purposes. You can use a different address.
 
@@ -54,8 +54,6 @@ php -S localhost:8000 public/index.php
 After running this command, your project should be available at the following address:
 
 http://localhost:8000/
-
-_Now, let's check if the project works..._
 
 The following command will request the home page of your project using the cURL utility:
 
@@ -92,7 +90,7 @@ Swagger should be available at the following address:
 http://localhost:8000/swagger.html
 
 > By default, your project does not include any API operations, so Swagger will notify you about this.
-> To see at least something in Swagger, you can [create your first API operation](/docs/cookbook/user-api/create-user.md) right away.
+> To see at least something in Swagger, you can [create your first API operation](/docs/cookbook/api-endpoint-for-creating-user.md) right away.
 
 ![Screenshot](media/swagger-screenshot.png)
 
@@ -138,7 +136,7 @@ php bin/app router:clear-descriptors-cache
 
 ## What's next?
 
-- [Create your first API operation](/docs/cookbook/user-api/create-user.md)
+- [Create your first API operation](/docs/cookbook/api-endpoint-for-creating-user.md)
 
 ## Dependencies
 

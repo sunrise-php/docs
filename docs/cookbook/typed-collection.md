@@ -1,4 +1,4 @@
-# Typed Collection
+# Typed Collection :id=top
 
 A typed collection is essentially the same [collection](/docs/reference/type-conversion.md#collection), but its elements are typed not through the [Subtype](/docs/reference/hydrator-annotations.md#subtype) annotation, but by explicitly specifying the type in its constructor.
 

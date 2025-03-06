@@ -1,8 +1,8 @@
-[//]: # (TODO: Описать опции curlMultiSelectTimeout и curlMultiSelectSleepDuration)
+[//]: # (TODO: curlMultiSelectTimeout; curlMultiSelectSleepDuration)
 
 # sunrise/http-client-curl :id=top
 
-A simple HTTP cURL client implementing [PSR-18](https://www.php-fig.org/psr/psr-18/).
+A simple cURL client implementing [PSR-18](https://www.php-fig.org/psr/psr-18/).
 
 ![PHP](https://img.shields.io/packagist/dependency-v/sunrise/http-client-curl/php?style=social&logo=php&label=PHP)
 ![Coverage](https://img.shields.io/scrutinizer/coverage/g/sunrise-php/http-client-curl?style=social)
@@ -16,59 +16,73 @@ A simple HTTP cURL client implementing [PSR-18](https://www.php-fig.org/psr/psr-
 composer require sunrise/http-client-curl
 ```
 
-## Quick Start
-
-To work with the HTTP client, an implementation of the HTTP message is required.
-We recommend using [sunrise/http-message](/docs/packages/sunrise/http-message/), but you can use any other [PSR-7](https://www.php-fig.org/psr/psr-7/) compatible implementation.
+This package also requires a [PSR-17](https://www.php-fig.org/psr/psr-17/) compatible package;
+we recommend [sunrise/http-message](/docs/packages/sunrise/http-message/).
 
 ```bash
 composer require sunrise/http-message
 ```
 
-Now we can initialize the HTTP client.
-Note that when initializing, we can pass [cURL parameters](https://www.php.net/manual/en/curl.constants.php), but this is optional.
+## Quick Start
+
+### Single Request
 
 ```php
 use Sunrise\Http\Client\Curl\Client;
+use Sunrise\Http\Message\RequestFactory;
 use Sunrise\Http\Message\ResponseFactory;
 
-$client = new Client(new ResponseFactory(), [
+$client = new Client(new ResponseFactory());
+$requestFactory = new RequestFactory();
+
+$request = $requestFactory->createRequest('GET', 'https://www.php.net/');
+$response = $client->sendRequest($request);
+```
+
+### Multiple Requests
+
+```php
+use Sunrise\Http\Client\Curl\Client;
+use Sunrise\Http\Client\Curl\MultiRequest;
+use Sunrise\Http\Message\RequestFactory;
+use Sunrise\Http\Message\ResponseFactory;
+
+$client = new Client(new ResponseFactory());
+$requestFactory = new RequestFactory();
+
+$requests = [
+    $requestFactory->createRequest('GET', 'https://www.php.net/releases/8.4/en.php'),
+    $requestFactory->createRequest('GET', 'https://www.php.net/releases/8.3/en.php'),
+];
+
+$multiRequest = new MultiRequest(...$requests);
+$multiResponse = $client->sendRequest($multiRequest);
+
+// Responses with the same keys as the requests.
+$responses = $multiResponse->getResponses();
+```
+
+## cURL Options
+
+The following options cannot be overridden:
+
+- [CURLOPT_CUSTOMREQUEST](https://www.php.net/manual/en/curl.constants.php#constant.curlopt-customrequest)
+- [CURLOPT_HEADER](https://www.php.net/manual/en/curl.constants.php#constant.curlopt-header)
+- [CURLOPT_HTTPHEADER](https://www.php.net/manual/en/curl.constants.php#constant.curlopt-httpheader)
+- [CURLOPT_POSTFIELDS](https://www.php.net/manual/en/curl.constants.php#constant.curlopt-postfields)
+- [CURLOPT_RETURNTRANSFER](https://www.php.net/manual/en/curl.constants.php#constant.curlopt-returntransfer)
+- [CURLOPT_URL](https://www.php.net/manual/en/curl.constants.php#constant.curlopt-url)
+
+```php
+$client = new Client(new ResponseFactory(), curlOptions: [
     \CURLOPT_AUTOREFERER => true,
     \CURLOPT_FOLLOWLOCATION => true,
 ]);
 ```
 
-Now we can send an HTTP request.
-Let's request the homepage of [php.net](https://www.php.net/).
-
-```php
-$response = $client->sendRequest((new RequestFactory())->createRequest('GET', 'https://www.php.net/'));
-```
-
-If we need to send multiple requests simultaneously, it's very easy to do.
-
-```php
-$multiResponse = $client->sendRequest(
-    new MultiRequest(
-        php82: (new RequestFactory())->createRequest('GET', 'https://www.php.net/releases/8.2/en.php'),
-        php83: (new RequestFactory())->createRequest('GET', 'https://www.php.net/releases/8.3/en.php'),
-        php84: (new RequestFactory())->createRequest('GET', 'https://www.php.net/releases/8.4/en.php'),
-    )
-);
-
-// Response from: https://www.php.net/releases/8.2/en.php
-$php82Response = $multiResponse->getResponses()['php82'];
-// Response from: https://www.php.net/releases/8.3/en.php
-$php83Response = $multiResponse->getResponses()['php83'];
-// Response from: https://www.php.net/releases/8.4/en.php
-$php84Response = $multiResponse->getResponses()['php84'];
-```
-
-_Note that in this example, you have the option to assign a name to each request so that you can later reference the responses associated with them, but this is an optional feature._
-
 ## Awesome Skeleton
 
-For integration with [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), open the `config/container.php` configuration file and place the following code somewhere in it.
+### Integration
 
 ```php
 $containerBuilder->addDefinitions(
@@ -76,9 +90,7 @@ $containerBuilder->addDefinitions(
 );
 ```
 
-Now you can use this client as `\Psr\Http\Client\ClientInterface` through dependency injection.
-
-You can also override the following parameters:
+### Parameters
 
 - [curl.options](/docs/reference/app-parameters.md#curl_options)
 - [curl.multi_select_timeout](/docs/reference/app-parameters.md#curl_multi_select_timeout)

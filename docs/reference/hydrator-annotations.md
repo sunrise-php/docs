@@ -1,4 +1,4 @@
-# Hydrator Annotation Reference
+# Hydrator Annotation Reference :id=top
 
 ## Alias
 
@@ -17,7 +17,7 @@ public readonly array $errorCodes
 
 ## Context
 
-Allows passing [additional context](/docs/reference/app-parameters.md#hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/).
+Allows passing [additional operational context](/docs/packages/sunrise/hydrator/#context) to the [hydrator](/docs/packages/sunrise/hydrator/).
 
 > Pay attention to the `\Sunrise\Hydrator\Dictionary\ContextKey` dictionary.
 
@@ -47,7 +47,7 @@ public readonly ?string $foo
 
 Allows specifying a data format.
 
-> You can set the global date and time format through the [hydrator.context.timestamp_format](/docs/reference/app-parameters.md#hydrator_context_timestamp_format) parameter.
+> You can set the date and time format through the [global context](/docs/packages/sunrise/hydrator/#context) or the [application parameter](/docs/reference/app-parameters.md#hydrator_context).
 
 ```php
 use DateTimeImmutable;
@@ -110,6 +110,7 @@ Allows typing [arrays](/docs/reference/type-conversion.md#array) and [collection
 
 ```php
 use Sunrise\Hydrator\Annotation\Subtype;
+use Sunrise\Hydrator\Dictionary\BuiltinType;
 
 #[Subtype(BuiltinType::STRING, limit: 100)]
 public readonly array $tags

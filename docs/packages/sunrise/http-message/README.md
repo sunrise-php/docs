@@ -16,106 +16,155 @@ An HTTP message implementation based on [PSR-7](https://www.php-fig.org/psr/psr-
 composer require sunrise/http-message
 ```
 
-## PSR-7 and PSR-17
+## PSR-7 Implementations
 
-Primarily, this package includes [PSR-7](https://www.php-fig.org/psr/psr-7/) and [PSR-17](https://www.php-fig.org/psr/psr-17/) implementations,
-so let's define the mapping with the corresponding implementations.
+| Interface                                         | Implementation                               |
+|---------------------------------------------------|----------------------------------------------|
+| `\Psr\Http\Message\RequestInterface`              | `\Sunrise\Http\Message\Request`              |
+| `\Psr\Http\Message\ResponseInterface`             | `\Sunrise\Http\Message\Response`             |
+| `\Psr\Http\Message\ServerRequestInterface`        | `\Sunrise\Http\Message\ServerRequest`        |
+| `\Psr\Http\Message\StreamInterface`               | `\Sunrise\Http\Message\Stream`               |
+| `\Psr\Http\Message\UploadedFileInterface`         | `\Sunrise\Http\Message\UploadedFile`         |
+| `\Psr\Http\Message\UriInterface`                  | `\Sunrise\Http\Message\Uri`                  |
+
+## PSR-17 Implementations
 
 | Interface                                         | Implementation                               |
 |---------------------------------------------------|----------------------------------------------|
 | `\Psr\Http\Message\RequestFactoryInterface`       | `\Sunrise\Http\Message\RequestFactory`       |
-| `\Psr\Http\Message\RequestInterface`              | `\Sunrise\Http\Message\Request`              |
 | `\Psr\Http\Message\ResponseFactoryInterface`      | `\Sunrise\Http\Message\ResponseFactory`      |
-| `\Psr\Http\Message\ResponseInterface`             | `\Sunrise\Http\Message\Response`             |
 | `\Psr\Http\Message\ServerRequestFactoryInterface` | `\Sunrise\Http\Message\ServerRequestFactory` |
-| `\Psr\Http\Message\ServerRequestInterface`        | `\Sunrise\Http\Message\ServerRequest`        |
 | `\Psr\Http\Message\StreamFactoryInterface`        | `\Sunrise\Http\Message\StreamFactory`        |
-| `\Psr\Http\Message\StreamInterface`               | `\Sunrise\Http\Message\Stream`               |
 | `\Psr\Http\Message\UploadedFileFactoryInterface`  | `\Sunrise\Http\Message\UploadedFileFactory`  |
-| `\Psr\Http\Message\UploadedFileInterface`         | `\Sunrise\Http\Message\UploadedFile`         |
 | `\Psr\Http\Message\UriFactoryInterface`           | `\Sunrise\Http\Message\UriFactory`           |
-| `\Psr\Http\Message\UriInterface`                  | `\Sunrise\Http\Message\Uri`                  |
 
 ## Server Request
 
+A request from server parameters.
+
 ```php
-$request = \Sunrise\Http\Message\ServerRequestFactory::fromGlobals();
+use Sunrise\Http\Message\ServerRequestFactory;
+
+$request = ServerRequestFactory::fromGlobals();
 ```
 
 ## JSON Request
 
+A request that encodes the provided data using `JSON` format and sets the corresponding `Content-Type` header.
+
+> Consider using [sunrise/coder](/docs/packages/sunrise/coder/).
+
 ```php
-$request = new \Sunrise\Http\Message\Request\JsonRequest('POST', '/', ['foo' => 'bar']);
+use Sunrise\Http\Message\Request\JsonRequest;
+
+$request = new JsonRequest('POST', '/endpoint', ['foo' => 'bar']);
 ```
 
 ## URL Encoded Request
 
+A request that encodes the provided data using `URL Encoded` format and sets the corresponding `Content-Type` header.
+
+> Consider using [sunrise/coder](/docs/packages/sunrise/coder/).
+
 ```php
-$request = new \Sunrise\Http\Message\Request\UrlEncodedRequest('POST', '/', ['foo' => 'bar']);
+use Sunrise\Http\Message\Request\UrlEncodedRequest;
+
+$request = new UrlEncodedRequest('POST', '/endpoint', ['foo' => 'bar']);
 ```
 
 ## HTML Response
 
+A response that represents an `HTML` document, ensuring the provided content is cast to a `string` and setting the corresponding `Content-Type` header.
+
 ```php
-$response = new \Sunrise\Http\Message\Response\HtmlResponse(200, '<h1>Welcome!</h1>');
+use Sunrise\Http\Message\Response\HtmlResponse;
+
+$response = new HtmlResponse(200, '<h1>Welcome!</h1>');
 ```
 
 ## JSON Response
 
+A response that encodes the provided data using `JSON` format and sets the corresponding `Content-Type` header.
+
+> Consider using [sunrise/coder](/docs/packages/sunrise/coder/).
+
 ```php
-$response = new \Sunrise\Http\Message\Response\JsonResponse(200, ['foo' => 'bar']);
+use Sunrise\Http\Message\Response\JsonResponse;
+
+$response = new JsonResponse(200, ['foo' => 'bar']);
 ```
 
 ## File Stream
 
 ```php
-$stream = new \Sunrise\Http\Message\Stream\FileStream('/filename', 'r+b');
+use Sunrise\Http\Message\Stream\FileStream;
+
+$stream = new FileStream('/filename', 'r+b');
 ```
 
 ## Input Stream
 
-More information related to this stream can be found [here](https://www.php.net/manual/en/wrappers.php.php).
+A `read-only` stream wrapper for [php://input](https://www.php.net/manual/en/wrappers.php.php#wrappers.php.input).
 
 ```php
-$stream = new \Sunrise\Http\Message\Stream\PhpInputStream();
+use Sunrise\Http\Message\Stream\PhpInputStream;
+
+$stream = new PhpInputStream();
 ```
 
 ## Memory Stream
 
-More information related to this stream can be found [here](https://www.php.net/manual/en/wrappers.php.php).
+A stream wrapper for [php://memory](https://www.php.net/manual/en/wrappers.php.php#wrappers.php.memory).
 
 ```php
-$stream = new \Sunrise\Http\Message\Stream\PhpMemoryStream();
+use Sunrise\Http\Message\Stream\PhpMemoryStream;
+
+$stream = new PhpMemoryStream();
 ```
 
 ## Temporary Stream
 
-More information related to this stream can be found [here](https://www.php.net/manual/en/wrappers.php.php).
+A stream wrapper for [php://temp](https://www.php.net/manual/en/wrappers.php.php#wrappers.php.memory).
 
 ```php
-$stream = new \Sunrise\Http\Message\Stream\PhpTempStream();
+use Sunrise\Http\Message\Stream\PhpTempStream;
+
+$stream = new PhpTempStream();
 ```
 
 ## Temporary File Stream
 
-The stream opens a unique temporary file in binary read/write mode (w+b).
-The file will be automatically deleted when it is closed or when the program terminates.
+A stream that opens a **unique temporary file** in binary read-write mode (`w+b`). The file is **automatically deleted** when closed or when the program terminates.
 
 ```php
-$stream = new \Sunrise\Http\Message\Stream\TmpfileStream();
+use Sunrise\Http\Message\Stream\TmpfileStream;
+
+$stream = new TmpfileStream();
 ```
 
-If you don't require the behavior described above, you can use an alternative temporary file stream:
+If automatic file deletion is not required, you can use another stream that also opens a **unique temporary file** in binary read-write mode (`r+b`), but **without the automatic deletion behavior**:
 
 ```php
-$stream = new \Sunrise\Http\Message\Stream\TempFileStream();
+use Sunrise\Http\Message\Stream\TempFileStream;
+
+$stream = new TempFileStream();
 ```
 
-If you need to get the file path, you can do it as follows:
+In any case, it's useful to know that the file's URI can be gotten as follows:
 
 ```php
-$filename = $stream->getMetadata('uri');
+$uri = $stream->getMetadata('uri');
 ```
+
+## Awesome Skeleton
+
+### Integration
+
+Integrated by default.
+
+### Parameters
+
+No parameters available.
 
 ## Tests
 

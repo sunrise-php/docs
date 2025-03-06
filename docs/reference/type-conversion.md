@@ -1,4 +1,4 @@
-# Type Conversion Reference
+# Type Conversion Reference :id=top
 
 The type conversion system is provided by the [sunrise/hydrator](/docs/packages/sunrise/hydrator/) package.
 It is actively used in processes such as runtime DTO initialization, runtime resolving parameters in controller actions, and more.
@@ -13,7 +13,7 @@ Conversely, if a property has a default value, it can be omitted.
 
 A property or parameter can accept `null` if it is marked as `nullable`.
 
-In the type conversion system, not only `null` is considered `null`, but also, for some types, an **empty string** or a string containing only **whitespace characters**.
+In the type conversion system, not only `null` is considered `null`, but also, for some types, an **empty string** or a string containing **only whitespace characters**.
 This behavior is implemented to support untyped data sources, such as HTML forms.
 
 ```php
@@ -144,11 +144,11 @@ Depending on the expected timestamp format, the client will be expected to provi
 If the format is `U`, an [int](#int) is expected; otherwise, a [string](#string).
 
 The format can be overridden for a property or parameter using the [Format](/docs/reference/hydrator-annotations.md#format) annotation.
-However, this should be a last resort, as the format should be defined [globally](/docs/reference/app-parameters.md#hydrator_context_timestamp_format).
+However, this should be a last resort, as the format should be defined [globally](/docs/packages/sunrise/hydrator/#context).
 
 Just like the format, the timezone can also be overridden for a property or parameter using the [Context](/docs/reference/hydrator-annotations.md#context) annotation.
 Pass an array where the key is `\Sunrise\Hydrator\Dictionary\ContextKey::TIMEZONE` and the value is the [timezone identifier](https://www.php.net/manual/en/timezones.php).
-However, keep in mind that the timezone should be defined [globally](/docs/reference/app-parameters.md#hydrator_context_timezone_identifier).
+However, keep in mind that the timezone should be defined [globally](/docs/packages/sunrise/hydrator/#context).
 
 > Remember that as part of supporting untyped data sources, **empty strings** are considered [null](#null) values.
 

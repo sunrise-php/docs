@@ -1,4 +1,4 @@
-# Controller Annotation Reference
+# Controller Annotation Reference :id=top
 
 ## ApiRoute
 
@@ -156,7 +156,7 @@ Specifies to encode views returned directly from an operation.
 
 > If you need to override the [default media type](/docs/reference/app-parameters.md#router_encodable_response_resolver_default_media_type), set it using the `defaultMediaType` parameter of the annotation.
 
-> If you need to pass [additional context](/docs/reference/app-parameters.md#router_encodable_response_resolver_codec_context) to the [encoder](/docs/packages/sunrise/coder/), set it through the `codecContext` parameter of the annotation.
+> If you need to pass [additional operational context](/docs/reference/app-parameters.md#router_encodable_response_resolver_codec_context) to the [encoder](/docs/packages/sunrise/coder/), set it through the `codecContext` parameter of the annotation.
 
 ```php
 use App\Dictionary\MediaType;
@@ -665,7 +665,7 @@ Used to bind a request body to an operation parameter.
 
 > If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional operational context](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
@@ -693,7 +693,7 @@ Used to bind a request cookie to an operation parameter.
 
 > If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional operational context](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
@@ -717,7 +717,7 @@ Used to bind a request header to an operation parameter.
 
 > If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional operational context](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
@@ -741,7 +741,7 @@ Used to bind a request query to an operation parameter.
 
 > If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional operational context](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 
@@ -766,7 +766,7 @@ Used to bind a route variable to an operation parameter.
 
 > If you need to override the [default error message](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_default_error_message), set it in the `errorMessage` parameter of the annotation.
 
-> If you need to pass [additional context](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
+> If you need to pass [additional operational context](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_hydrator_context) to the [hydrator](/docs/packages/sunrise/hydrator/), set it in the `hydratorContext` parameter of the annotation.
 
 > If you need to change the [default validator activity](/docs/reference/app-parameters.md#router_request_variable_parameter_resolver_default_validation_enabled), set it in the `validationEnabled` parameter of the annotation.
 

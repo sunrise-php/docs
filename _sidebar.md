@@ -11,6 +11,7 @@
   * [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 * 📖 **Reference**
   * [App Parameters](/docs/reference/app-parameters.md)
+  * [Constrains](/docs/reference/constraints.md)
   * [Controller Annotations](/docs/reference/controller-annotations.md)
   * [Hydrator Annotations](/docs/reference/hydrator-annotations.md)
   * [Type Conversion](/docs/reference/type-conversion.md)
@@ -20,3 +21,4 @@
   * [PSR-15 Controller](/docs/cookbook/psr-15-controller.md)
   * [PSR-15 Middleware](/docs/cookbook/psr-15-middleware.md)
   * [Typed Collection](/docs/cookbook/typed-collection.md)
+  * [Validator Integration](/docs/cookbook/validator-integration.md)

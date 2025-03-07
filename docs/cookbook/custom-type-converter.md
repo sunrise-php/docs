@@ -53,7 +53,7 @@ final readonly class MonetaryTypeConverter implements TypeConverterInterface
 
 Now, let's register this type converter in the system.
 
-If you're using [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), open the configuration file `config/definitions/hydrator.php` and modify it as shown below:
+If you're using [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), open the configuration file `config/definitions/hydrator.php` and modify the [hydrator.type_converters](/docs/reference/app-parameters.md#hydrator_type_converters) parameter as shown below:
 
 ```php
 declare(strict_types=1);

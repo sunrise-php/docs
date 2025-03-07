@@ -16,7 +16,7 @@ A simple cURL client implementing [PSR-18](https://www.php-fig.org/psr/psr-18/).
 composer require sunrise/http-client-curl
 ```
 
-This package also requires a [PSR-17](https://www.php-fig.org/psr/psr-17/) compatible package;
+This package also requires [PSR-17](https://www.php-fig.org/psr/psr-17/) compatible package;
 we recommend [sunrise/http-message](/docs/packages/sunrise/http-message/).
 
 ```bash

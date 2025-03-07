@@ -97,14 +97,6 @@ Below is a table of contextual keys along with their descriptions.
 - Refer to the [Type Conversion Reference](/docs/reference/type-conversion.md) to learn how the **Hydrator** handles types.
 - Refer to the [Custom Type Converter](/docs/cookbook/custom-type-converter.md) example if you want to learn how to extend the **Hydrator** on your own.
 
-## Doctrine Annotations
-
-If, for any reason, you cannot use [PHP attributes](https://www.php.net/manual/en/language.attributes.overview.php) but need to use the [additional features](/docs/reference/hydrator-annotations.md) of the Hydrator, you can use [Doctrine annotations](https://www.doctrine-project.org/projects/doctrine-annotations/en/2.0/index.html) instead.
-
-```bash
-composer require doctrine/annotations
-```
-
 ## Awesome Skeleton
 
 ### Integration
@@ -117,6 +109,14 @@ Integrated by default.
 - [hydrator.context.timestamp_format](/docs/reference/app-parameters.md#hydrator_context_timestamp_format)
 - [hydrator.context.timezone_identifier](/docs/reference/app-parameters.md#hydrator_context_timezone_identifier)
 - [hydrator.type_converters](/docs/reference/app-parameters.md#hydrator_type_converters)
+
+## Doctrine Annotations
+
+If, for any reason, you cannot use [PHP attributes](https://www.php.net/manual/en/language.attributes.overview.php) but need to use the [additional features](/docs/reference/hydrator-annotations.md) of the Hydrator, you can use [Doctrine annotations](https://www.doctrine-project.org/projects/doctrine-annotations/en/2.0/index.html) instead.
+
+```bash
+composer require doctrine/annotations
+```
 
 ## Tests
 

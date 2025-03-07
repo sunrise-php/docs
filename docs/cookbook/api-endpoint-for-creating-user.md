@@ -29,7 +29,7 @@ final readonly class CreateUserRequest
 
 Next, create a controller and an action to handle the client's request.
 
-> Refer to the [Controller Annotation Reference](/docs/reference/controller-annotations.md) to learn about additional router features.
+> Refer to the [Controller Annotation Reference](/docs/reference/routing-annotations.md) to learn about additional router features.
 
 ```php
 declare(strict_types=1);

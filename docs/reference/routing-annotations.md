@@ -1,4 +1,4 @@
-# Controller Annotation Reference :id=top
+# Routing Annotation Reference :id=top
 
 ## ApiRoute
 

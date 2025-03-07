@@ -18,3 +18,9 @@ final readonly class AuthController
     }
 }
 ```
+
+## RequestTerminationMiddleware
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+

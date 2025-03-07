@@ -1,6 +1,6 @@
 # PSR-15 Controller :id=top
 
-> Refer to the [Controller Annotation Reference](/docs/reference/controller-annotations.md) to learn about additional router features.
+> Refer to the [Routing Annotation Reference](/docs/reference/routing-annotations.md) to learn about additional router features.
 
 ```php
 use Psr\Http\Message\ResponseFactoryInterface;

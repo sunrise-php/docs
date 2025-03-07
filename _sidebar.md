@@ -11,10 +11,10 @@
   * [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 * 📖 **Reference**
   * [App Parameters](/docs/reference/app-parameters.md)
-  * [Constrains](/docs/reference/constraints.md)
-  * [Controller Annotations](/docs/reference/controller-annotations.md)
   * [Hydrator Annotations](/docs/reference/hydrator-annotations.md)
+  * [Routing Annotations](/docs/reference/routing-annotations.md)
   * [Type Conversion](/docs/reference/type-conversion.md)
+  * [Validator Constrains](/docs/reference/validator-constraints.md)
 * 📚 **Cookbook**
   * [API Endpoint for Creating a User](/docs/cookbook/api-endpoint-for-creating-user.md)
   * [Custom Type Converter](/docs/cookbook/custom-type-converter.md)

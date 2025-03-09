@@ -65,11 +65,11 @@ $entityManagerRegistry = new EntityManagerRegistry(
 $entityManager = $entityManagerRegistry->getEntityManager();
 ```
 
-## What's Next
+## What's Next :id=what-is-next
 
-- Refer to the hydrator annotation [MapEntity](/docs/reference/hydrator-annotations.md#mapentity), which allows binding the requested entity to a class property (typically a DTO).
-- Refer to the routing annotation [RequestedEntity](/docs/reference/routing-annotations.md#requestedentity), which allows binding the requested entity to a controller action parameter.
-- Refer to the [RequestTerminationMiddleware](/docs/reference/middlewares.md#requestterminationmiddleware) middleware, which commits database changes after each request.
+- Refer to the [MapEntity](/docs/reference/hydrator-annotations.md#mapentity) annotation, which allows binding the requested entity to a property.
+- Refer to the [RequestedEntity](/docs/reference/routing-annotations.md#requestedentity) annotation, which allows binding the requested entity to a controller's action parameter.
+- Refer to the [RequestTerminationMiddleware](/docs/reference/routing-middlewares.md#requestterminationmiddleware) middleware, which commits database changes after each request.
 - Refer to the [UniqueEntity](/docs/reference/validator-constraints.md#uniqueentity) constraint, which ensures entity uniqueness.
 
 ## Awesome Skeleton

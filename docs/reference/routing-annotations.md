@@ -152,7 +152,7 @@ public function example(): void
 
 ## EncodableResponse
 
-Specifies to encode views returned directly from an operation.
+Specifies to encode views returned directly from an action.
 
 > The following annotations may be useful for you: [ResponseStatus](#responsestatus).
 
@@ -661,7 +661,7 @@ public function example(): void
 
 ## RequestBody
 
-Used to bind a request body to an operation parameter.
+Used to bind a request body to an action parameter.
 
 > If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_body_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
@@ -691,7 +691,7 @@ public function create(
 
 ## RequestCookie
 
-Used to bind a request cookie to an operation parameter.
+Used to bind a request cookie to an action parameter.
 
 > If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_cookie_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
@@ -717,7 +717,7 @@ public function example(#[RequestCookie('foo')] string $foo): void
 
 ## RequestHeader
 
-Used to bind a request header to an operation parameter.
+Used to bind a request header to an action parameter.
 
 > If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_header_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
@@ -743,7 +743,7 @@ public function example(#[RequestHeader('X-Foo')] string $foo): void
 
 ## RequestQuery
 
-Used to bind a request query to an operation parameter.
+Used to bind a request query to an action parameter.
 
 > If you need to override the [default error status code](/docs/reference/app-parameters.md#router_request_query_parameter_resolver_default_error_status_code), set it in the `errorStatusCode` parameter of the annotation.
 
@@ -768,7 +768,7 @@ public function list(#[RequestQuery] UserSearchRequest $userSearchRequest): void
 
 ## RequestVariable
 
-Used to bind a route variable to an operation parameter.
+Used to bind a route variable to an action parameter.
 
 > By default, the route variable name can be omitted, as the action parameter name will be used. If they don't match, you can specify the route variable name using the `name` parameter of the annotation.
 
@@ -804,7 +804,7 @@ public function read(#[RequestVariable] int $id): UserView
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 
-Used to bind a requested entity to an operation's parameter.
+Used to bind a requested entity to an action's parameter.
 
 By default, it expects a variable in the route with the same name as the entity's identifier field. In other words, if the entity's identifier field is named `id`, then the variable in the route should be named `{id}` as well.
 

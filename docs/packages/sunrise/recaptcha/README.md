@@ -58,8 +58,8 @@ if ($result->success) {
 
 ## What's Next :id=what-is-next
 
-- Refer to the [Recaptcha Challenge](/docs/reference/routing-middlewares.md#recaptchachallengemiddleware) middleware for token verification through the [middleware](/docs/reference/routing-annotations.md#middleware-in-the-form-of-an-fqn-class-name).
-- Refer to the [Recaptcha Challenge](/docs/reference/validator-constraints.md#recaptchachallenge) constraint for token verification through the [validator](/docs/cookbook/validator-integration.md).
+- Refer to the [RecaptchaChallengeMiddleware](/docs/reference/routing-middlewares.md#recaptchachallengemiddleware) middleware for token verification through the [middleware](/docs/reference/routing-annotations.md#middleware-in-the-form-of-an-fqn-class-name).
+- Refer to the [RecaptchaChallenge](/docs/reference/validator-constraints.md#recaptchachallenge) constraint for token verification through the [validator](/docs/cookbook/validator-integration.md).
 
 ## Awesome Skeleton
 

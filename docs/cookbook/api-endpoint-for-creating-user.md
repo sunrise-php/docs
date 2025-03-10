@@ -1,12 +1,12 @@
 # API Endpoint for Creating a User :id=top
 
-This is a demonstration example and does not include storage logic—it only provides a starting point.
+This example doesn't include storage logic—it only provides a starting point.
 
-First, create a DTO that represents data expected from the client.
+First, create a DTO that defines the expected client data.
 
-> Refer to the [Hydrator Annotation Reference](/docs/reference/hydrator-annotations.md) to learn about additional hydrator features.
+> Refer to the [Hydrator Annotation Reference](/docs/reference/hydrator-annotations.md) to learn about additional [hydrator](/docs/packages/sunrise/hydrator/) features.
 
-> Refer to the [Type Conversion Reference](/docs/reference/type-conversion.md) to learn how the hydrator handles types.
+> Refer to the [Type Conversion Reference](/docs/reference/type-conversion.md) to learn how the [hydrator](/docs/packages/sunrise/hydrator/) handles types.
 
 ```php
 declare(strict_types=1);
@@ -27,9 +27,9 @@ final readonly class CreateUserRequest
 }
 ```
 
-Next, create a controller and an action to handle the client's request.
+Next, create a controller with an action that handles the client's request.
 
-> Refer to the [Routing Annotation Reference](/docs/reference/routing-annotations.md) to learn about additional router features.
+> Refer to the [Routing Annotation Reference](/docs/reference/routing-annotations.md) to learn about additional [router](/docs/packages/sunrise/http-router/) features.
 
 ```php
 declare(strict_types=1);

@@ -1,4 +1,4 @@
-# Constraint Reference :id=top
+# Validator Constraint Reference :id=top
 
 > Learn how to integrate the Validator into the system. See the [Validator Integration](/docs/cookbook/validator-integration.md) for more details.
 
@@ -6,7 +6,7 @@
 
 **Part of the package**: [sunrise/recaptcha](/docs/packages/sunrise/recaptcha/)
 
-Validates the user's token.
+Validates the [user's response token](https://developers.google.com/recaptcha/docs/verify).
 
 ```php
 use Sunrise\Recaptcha\Integration\Validator\Constraint\RecaptchaChallenge;
@@ -15,7 +15,7 @@ final readonly class SomeDto
 {
     public function __construct(
         #[RecaptchaChallenge]
-        public readonly $recaptcha,
+        private $recaptcha,
     ) {
     }
 }

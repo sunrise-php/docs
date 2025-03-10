@@ -77,7 +77,7 @@ try {
 
 ## Context
 
-The **Hydrator** utilizes type converters that you do not interact with directly.
+The **Hydrator** uses type converters that you do not interact with directly.
 However, there are cases where you may need to influence their behavior, which can be done through **context**.
 There are two types of context: **global** and **operational**.
 
@@ -116,6 +116,12 @@ If, for any reason, you cannot use [PHP attributes](https://www.php.net/manual/e
 
 ```bash
 composer require doctrine/annotations
+```
+
+```php
+use Sunrise\Hydrator\AnnotationReader\DoctrineAnnotationReader;
+
+$hydrator->setAnnotationReader(DoctrineAnnotationReader::default());
 ```
 
 ## Tests

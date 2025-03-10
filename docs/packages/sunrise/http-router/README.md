@@ -28,6 +28,13 @@ A powerful solution as the foundation of your project.
 composer require sunrise/http-router
 ```
 
+This package also requires [PSR-7](https://www.php-fig.org/psr/psr-7/) and [PSR-17](https://www.php-fig.org/psr/psr-17/) compatible packages;
+we recommend [sunrise/http-message](/docs/packages/sunrise/http-message/).
+
+```bash
+composer require sunrise/http-message
+```
+
 ## Awesome Skeleton
 
 ### Integration
@@ -66,8 +73,8 @@ Integrated by default.
 
 #### Descriptor Loader Parameters
 
-- [router.descriptor_loader.resources](/docs/reference/app-parameters.md#router_descriptor_loader_resources)
 - [router.descriptor_loader.cache](/docs/reference/app-parameters.md#router_descriptor_loader_cache)
+- [router.descriptor_loader.resources](/docs/reference/app-parameters.md#router_descriptor_loader_resources)
 
 #### Error Handling Middleware Parameters
 

@@ -4,6 +4,8 @@
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an API operation.
 
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
 > You may want to use one of the following annotations: [DeleteApiRoute](#deleteapiroute), [GetApiRoute](#getapiroute), [HeadApiRoute](#headapiroute), [OptionsApiRoute](#optionsapiroute), [PatchApiRoute](#patchapiroute), [PatchApiRoute](#patchapiroute), [PostApiRoute](#postapiroute), [PurgeApiRoute](#purgeapiroute), [PutApiRoute](#putapiroute).
 
 > The following annotations may be useful for you: [Method](#method), [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
@@ -47,15 +49,15 @@ Sets a media type(s) consumed by an operation.
 
 ```php
 use App\Dictionary\MediaType;
-use App\Dto\User\UserCreateRequest;
+use App\Dto\Page\PageCreateRequest;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 
-#[PostApiRoute('api.users.create', '/api/users')]
+#[PostApiRoute('api.pages.create', '/api/pages')]
 #[Consumes(MediaType::JSON)]
 public function create(
-    #[RequestBody] UserCreateRequest $userCreateRequest,
+    #[RequestBody] PageCreateRequest $pageCreateRequest,
 ): void
 ```
 
@@ -70,7 +72,7 @@ use Sunrise\Http\Router\Annotation\DefaultAttribute;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.publications.list', '/api/publications(/{language})')]
+#[GetApiRoute('api.posts.list', '/api/posts(/{language})')]
 #[DefaultAttribute('language', 'en')]
 public function list(
     #[RequestVariable] string $language,
@@ -80,6 +82,8 @@ public function list(
 ## DeleteApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `DELETE` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -108,6 +112,8 @@ public function example(): void
 ## DeleteRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `DELETE` operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -162,21 +168,23 @@ Specifies to encode views returned directly from an action.
 
 ```php
 use App\Dictionary\MediaType;
-use App\View\User\UserView;
+use App\View\Page\PageView;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.users.read', '/api/users/{id}')]
+#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestVariable] int $id): UserView
+public function read(#[RequestVariable] int $id): PageView
 ```
 
 ## GetApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `GET` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -206,6 +214,8 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `GET` operation.
 
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
@@ -218,6 +228,8 @@ public function example(): void
 ## HeadApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `HEAD` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -246,6 +258,8 @@ public function example(): void
 ## HeadRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `HEAD` operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -353,6 +367,8 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an `OPTIONS` API operation.
 
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
@@ -381,6 +397,8 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an `OPTIONS` operation.
 
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
@@ -393,6 +411,8 @@ public function example(): void
 ## PatchApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PATCH` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -421,6 +441,8 @@ public function example(): void
 ## PatchRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PATCH` operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -481,9 +503,11 @@ Sets a pattern for a route variable.
 
 **Expects not a regex, but a subpattern, i.e., an expression without delimiters and modifiers.**
 
-> This annotation can be applied not only to an action but also to a class and even to its parent classes.
+> Note the [alternative way](/docs/reference/routing-syntax.md#variable-patterns) of defining the pattern.
 
-> You can also specify the pattern directly in the route – `{id<\d+>}`.
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
+> This annotation can be applied not only to an action but also to a class and even to its parent classes.
 
 > Pay attention to the `\Sunrise\Http\Router\Dictionary\VariablePattern` dictionary.
 
@@ -492,7 +516,7 @@ use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Pattern;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.user.read', '/api/user/{id}')]
+#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
 #[Pattern('id', '\d+')]
 public function read(#[RequestVariable] int $id): void
 ```
@@ -500,6 +524,8 @@ public function read(#[RequestVariable] int $id): void
 ## PostApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `POST` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -528,6 +554,8 @@ public function example(): void
 ## PostRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `POST` operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -565,21 +593,23 @@ Sets a media type(s) produced by an operation.
 
 ```php
 use App\Dictionary\MediaType;
-use App\View\User\UserView;
+use App\View\Page\PageView;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.users.read', '/api/users/{id}')]
+#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestVariable] int $id): UserView
+public function read(#[RequestVariable] int $id): PageView
 ```
 
 ## PurgeApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PURGE` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -609,6 +639,8 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PURGE` operation.
 
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
@@ -621,6 +653,8 @@ public function example(): void
 ## PutApiRoute
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PUT` API operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
@@ -650,6 +684,8 @@ public function example(): void
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as a `PUT` operation.
 
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
+
 > The following annotations may be useful for you: [NamePrefix](#nameprefix), [PathPrefix](#pathprefix).
 
 ```php
@@ -677,15 +713,15 @@ Used to bind a request body to an action parameter.
 
 ```php
 use App\Dictionary\MediaType;
-use App\Dto\User\UserCreateRequest;
+use App\Dto\Page\PageCreateRequest;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 
-#[PostApiRoute('api.users.create', '/api/users')]
+#[PostApiRoute('api.pages.create', '/api/pages')]
 #[Consumes(MediaType::JSON)]
 public function create(
-    #[RequestBody] UserCreateRequest $userCreateRequest,
+    #[RequestBody] PageCreateRequest $pageCreateRequest,
 ): void
 ```
 
@@ -758,12 +794,12 @@ Used to bind a request query to an action parameter.
 > Learn how to integrate the Validator into the system. See the [Validator Integration](/docs/cookbook/validator-integration.md) for more details.
 
 ```php
-use App\Dto\User\UserSearchRequest;
+use App\Dto\Page\PageSearchRequest;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\RequestQuery;
 
-#[GetApiRoute('api.users.list', '/api/users')]
-public function list(#[RequestQuery] UserSearchRequest $userSearchRequest): void
+#[GetApiRoute('api.pages.list', '/api/pages')]
+public function list(#[RequestQuery] PageSearchRequest $pageSearchRequest): void
 ```
 
 ## RequestVariable
@@ -788,16 +824,16 @@ Used to bind a route variable to an action parameter.
 
 ```php
 use App\Dictionary\MediaType;
-use App\View\User\UserView;
+use App\View\Page\PageView;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.users.read', '/api/users/{id}')]
+#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestVariable] int $id): UserView
+public function read(#[RequestVariable] int $id): PageView
 ```
 
 ## RequestedEntity
@@ -818,17 +854,17 @@ By default, it expects a variable in the route with the same name as the entity'
 
 ```php
 use App\Dictionary\MediaType;
-use App\Entity\User;
-use App\View\User\UserView;
+use App\Entity\Page;
+use App\View\Page\PageView;
 use Sunrise\Bridge\Doctrine\Integration\Router\Annotation\RequestedEntity;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 
-#[GetApiRoute('api.users.read', '/api/users/{id}')]
+#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestedEntity] User $user): UserView
+public function read(#[RequestedEntity] Page $page): PageView
 ```
 
 ## ResponseHeader
@@ -852,24 +888,26 @@ Sets a response status.
 
 ```php
 use App\Dictionary\MediaType;
-use App\Dto\User\UserCreateRequest;
-use App\View\User\UserView;
+use App\Dto\Page\PageCreateRequest;
+use App\View\Page\PageView;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 use Sunrise\Http\Router\Annotation\ResponseStatus;
 
-#[PostApiRoute('api.users.create', '/api/users')]
+#[PostApiRoute('api.pages.create', '/api/pages')]
 #[Consumes(MediaType::JSON)]
 #[ResponseStatus(201)]
 public function create(
-    #[RequestBody] UserCreateRequest $userCreateRequest,
-): UserView
+    #[RequestBody] PageCreateRequest $pageCreateRequest,
+): PageView
 ```
 
 ## Route
 
 Marks a [PSR-15 controller](/docs/cookbook/psr-15-controller.md) or action as an operation.
+
+> Refer to the [Routing Syntax Reference](/docs/reference/routing-syntax.md) to understand the route syntax.
 
 > You may want to use one of the following annotations: [DeleteRoute](#deleteroute), [GetRoute](#getroute), [HeadRoute](#headroute), [OptionsRoute](#optionsroute), [PatchRoute](#patchroute), [PatchRoute](#patchroute), [PostRoute](#postroute), [PurgeRoute](#purgeroute), [PutRoute](#putroute).
 

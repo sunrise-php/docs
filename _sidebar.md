@@ -12,8 +12,10 @@
 * 📖 **Reference**
   * [App Parameters](/docs/reference/app-parameters.md)
   * [Hydrator Annotations](/docs/reference/hydrator-annotations.md)
+  * [Router](/docs/reference/router.md)
   * [Routing Annotations](/docs/reference/routing-annotations.md)
   * [Routing Middlewares](/docs/reference/routing-middlewares.md)
+  * [Routing Syntax](/docs/reference/routing-syntax.md)
   * [Type Conversion](/docs/reference/type-conversion.md)
   * [Validator Constrains](/docs/reference/validator-constraints.md)
 * 📚 **Cookbook**

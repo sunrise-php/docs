@@ -49,15 +49,15 @@ Sets a media type(s) consumed by an operation.
 
 ```php
 use App\Dictionary\MediaType;
-use App\Dto\Page\PageCreateRequest;
+use App\Dto\Post\PostCreateRequest;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 
-#[PostApiRoute('api.pages.create', '/api/pages')]
+#[PostApiRoute('api.posts.create', '/api/posts')]
 #[Consumes(MediaType::JSON)]
 public function create(
-    #[RequestBody] PageCreateRequest $pageCreateRequest,
+    #[RequestBody] PostCreateRequest $postCreateRequest,
 ): void
 ```
 
@@ -168,16 +168,16 @@ Specifies to encode views returned directly from an action.
 
 ```php
 use App\Dictionary\MediaType;
-use App\View\Page\PageView;
+use App\View\Post\PostView;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
+#[GetApiRoute('api.posts.read', '/api/posts/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestVariable] int $id): PageView
+public function read(#[RequestVariable] int $id): PostView
 ```
 
 ## GetApiRoute
@@ -516,7 +516,7 @@ use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Pattern;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
+#[GetApiRoute('api.posts.read', '/api/posts/{id}')]
 #[Pattern('id', '\d+')]
 public function read(#[RequestVariable] int $id): void
 ```
@@ -593,16 +593,16 @@ Sets a media type(s) produced by an operation.
 
 ```php
 use App\Dictionary\MediaType;
-use App\View\Page\PageView;
+use App\View\Post\PostView;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
+#[GetApiRoute('api.posts.read', '/api/posts/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestVariable] int $id): PageView
+public function read(#[RequestVariable] int $id): PostView
 ```
 
 ## PurgeApiRoute
@@ -713,15 +713,15 @@ Used to bind a request body to an action parameter.
 
 ```php
 use App\Dictionary\MediaType;
-use App\Dto\Page\PageCreateRequest;
+use App\Dto\Post\PostCreateRequest;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 
-#[PostApiRoute('api.pages.create', '/api/pages')]
+#[PostApiRoute('api.posts.create', '/api/posts')]
 #[Consumes(MediaType::JSON)]
 public function create(
-    #[RequestBody] PageCreateRequest $pageCreateRequest,
+    #[RequestBody] PostCreateRequest $postCreateRequest,
 ): void
 ```
 
@@ -794,12 +794,12 @@ Used to bind a request query to an action parameter.
 > Learn how to integrate the Validator into the system. See the [Validator Integration](/docs/cookbook/validator-integration.md) for more details.
 
 ```php
-use App\Dto\Page\PageSearchRequest;
+use App\Dto\Post\PostSearchRequest;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\RequestQuery;
 
-#[GetApiRoute('api.pages.list', '/api/pages')]
-public function list(#[RequestQuery] PageSearchRequest $pageSearchRequest): void
+#[GetApiRoute('api.posts.list', '/api/posts')]
+public function list(#[RequestQuery] PostSearchRequest $postSearchRequest): void
 ```
 
 ## RequestVariable
@@ -824,16 +824,16 @@ Used to bind a route variable to an action parameter.
 
 ```php
 use App\Dictionary\MediaType;
-use App\View\Page\PageView;
+use App\View\Post\PostView;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 use Sunrise\Http\Router\Annotation\RequestVariable;
 
-#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
+#[GetApiRoute('api.posts.read', '/api/posts/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestVariable] int $id): PageView
+public function read(#[RequestVariable] int $id): PostView
 ```
 
 ## RequestedEntity
@@ -854,17 +854,17 @@ By default, it expects a variable in the route with the same name as the entity'
 
 ```php
 use App\Dictionary\MediaType;
-use App\Entity\Page;
-use App\View\Page\PageView;
+use App\Entity\Post;
+use App\View\Post\PostView;
 use Sunrise\Bridge\Doctrine\Integration\Router\Annotation\RequestedEntity;
 use Sunrise\Http\Router\Annotation\EncodableResponse;
 use Sunrise\Http\Router\Annotation\GetApiRoute;
 use Sunrise\Http\Router\Annotation\Produces;
 
-#[GetApiRoute('api.pages.read', '/api/pages/{id}')]
+#[GetApiRoute('api.posts.read', '/api/posts/{id}')]
 #[Produces(MediaType::JSON)]
 #[EncodableResponse]
-public function read(#[RequestedEntity] Page $page): PageView
+public function read(#[RequestedEntity] Post $post): PostView
 ```
 
 ## ResponseHeader
@@ -888,19 +888,19 @@ Sets a response status.
 
 ```php
 use App\Dictionary\MediaType;
-use App\Dto\Page\PageCreateRequest;
-use App\View\Page\PageView;
+use App\Dto\Post\PostCreateRequest;
+use App\View\Post\PostView;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 use Sunrise\Http\Router\Annotation\ResponseStatus;
 
-#[PostApiRoute('api.pages.create', '/api/pages')]
+#[PostApiRoute('api.posts.create', '/api/posts')]
 #[Consumes(MediaType::JSON)]
 #[ResponseStatus(201)]
 public function create(
-    #[RequestBody] PageCreateRequest $pageCreateRequest,
-): PageView
+    #[RequestBody] PostCreateRequest $postCreateRequest,
+): PostView
 ```
 
 ## Route

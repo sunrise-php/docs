@@ -57,7 +57,7 @@ A request that encodes the provided data using `JSON` format and sets the corres
 ```php
 use Sunrise\Http\Message\Request\JsonRequest;
 
-$request = new JsonRequest('POST', '/endpoint', ['foo' => 'bar']);
+$request = new JsonRequest('POST', '/operation', ['foo' => 'bar']);
 ```
 
 ## URL Encoded Request
@@ -69,7 +69,7 @@ A request that encodes the provided data using `URL Encoded` format and sets the
 ```php
 use Sunrise\Http\Message\Request\UrlEncodedRequest;
 
-$request = new UrlEncodedRequest('POST', '/endpoint', ['foo' => 'bar']);
+$request = new UrlEncodedRequest('POST', '/operation', ['foo' => 'bar']);
 ```
 
 ## HTML Response
@@ -134,7 +134,9 @@ $stream = new PhpTempStream();
 
 ## Temporary File Stream
 
-A stream that opens a **unique temporary file** in binary read-write mode (`w+b`). The file is **automatically deleted** when closed or when the program terminates.
+A stream that opens a **unique temporary file** in binary read-write mode (`w+b`).
+
+The file is **automatically deleted** when closed or when the program terminates.
 
 ```php
 use Sunrise\Http\Message\Stream\TmpfileStream;

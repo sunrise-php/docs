@@ -179,7 +179,7 @@ If you're using the [ramsey/uuid](https://packagist.org/packages/ramsey/uuid) pa
 > Remember that as part of supporting untyped data sources, **empty strings** are considered [null](#null) values.
 
 ```php
-public readonly \Ramsey\Uuid\UuidInterface $uuid;
+public readonly \Ramsey\Uuid\UuidInterface $id;
 ```
 
 ### Symfony UID
@@ -191,7 +191,7 @@ If you are using the [symfony/uid](https://packagist.org/packages/symfony/uid) p
 > Remember that as part of supporting untyped data sources, **empty strings** are considered [null](#null) values.
 
 ```php
-public readonly \Symfony\Component\Uid\Uuid $uuid;
+public readonly \Symfony\Component\Uid\Uuid $id;
 ```
 
 ## Relationship

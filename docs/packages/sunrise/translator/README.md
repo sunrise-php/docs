@@ -31,21 +31,13 @@ use Sunrise\Translator\TranslatorManager;
 use Sunrise\Translator\Translator\DirectoryTranslator;
 
 $translator = new TranslatorManager([
-    new DirectoryTranslator(
-        domain: 'app',
-        directory: '/translations',
-    ),
+    new DirectoryTranslator(domain: 'app', directory: '/translations'),
 ]);
 
 // Translating result: Zdravo, Marko!
-$translator->translate(
-    domain: 'app',
-    locale: 'sr',
-    template: 'Hello, {username}!',
-    placeholders: [
-        '{username}' => 'Marko',
-    ],
-);
+$translator->translate(domain: 'app', locale: 'sr', template: 'Hello, {username}!', placeholders: [
+    '{username}' => 'Marko',
+]);
 ```
 
 ## Awesome Skeleton

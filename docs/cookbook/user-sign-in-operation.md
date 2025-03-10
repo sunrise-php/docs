@@ -1,6 +1,6 @@
-# API Endpoint for Creating a User :id=top
+# User Sign In Operation :id=top
 
-This example doesn't include storage logic—it only provides a starting point.
+**This example only provides a starting point.**
 
 First, create a DTO that defines the expected client data.
 
@@ -11,11 +11,11 @@ First, create a DTO that defines the expected client data.
 ```php
 declare(strict_types=1);
 
-namespace App\Dto\User;
+namespace App\Dto\Auth;
 
 use SensitiveParameter;
 
-final readonly class CreateUserRequest
+final readonly class SignInRequest
 {
     public function __construct(
         #[SensitiveParameter]
@@ -37,27 +37,27 @@ declare(strict_types=1);
 namespace App\Controller\Api;
 
 use App\Dictionary\MediaType;
-use App\Dto\User\CreateUserRequest;
+use App\Dto\Auth\SignInRequest;
 use Sunrise\Http\Router\Annotation\Consumes;
 use Sunrise\Http\Router\Annotation\PostApiRoute;
 use Sunrise\Http\Router\Annotation\RequestBody;
 
-final readonly class UserController
+final readonly class AuthController
 {
-    #[PostApiRoute('api.users.create', '/api/users')]
+    #[PostApiRoute('api.auth.signIn', '/api/auth/sign-in')]
     #[Consumes(MediaType::JSON)]
-    public function createUser(
+    public function signIn(
         #[RequestBody]
-        CreateUserRequest $createUserRequest,
+        SignInRequest $signInRequest,
     ): void {
     }
 }
 ```
 
-Next, test this endpoint using the `cURL` utility.
+Next, test this operation using the `cURL` utility.
 
 ```bash
-curl -i -X POST -H 'Content-Type: application/json' -d '{"email":"foo@example.com","password":"P@$$w0rD"}' http://localhost:8000/api/users
+curl -i -X POST -H 'Content-Type: application/json' -d '{"email":"foo@example.com","password":"P@$$w0rD"}' http://localhost:8000/api/auth/sign-in
 ```
 
 ```text
@@ -69,12 +69,14 @@ X-Powered-By: PHP/8.4.3
 
 ```
 
+_Response from the server._
+
 Next, update the API documentation.
 
 ```bash
 php bin/app router:openapi:build-document
 ```
 
-The updated **Swagger** should look something like the screenshot below.
+The updated [Swagger](http://localhost:8000/swagger.html) should look something like the screenshot below.
 
-![Screenshot](media/api-endpoint-for-creating-user-swagger-screenshot.png)
+![Screenshot](media/user-sign-in-operation-swagger-screenshot.png)

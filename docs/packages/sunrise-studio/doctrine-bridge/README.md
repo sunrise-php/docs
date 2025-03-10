@@ -42,7 +42,7 @@ $entityManagerParameters = new EntityManagerParameters(
     proxyDirectory: \sys_get_temp_dir() . '/doctrine-proxies',
     proxyNamespace: 'DoctrineProxies',
     // For production, use `ProxyFactory::AUTOGENERATE_NEVER`,
-    // but remember to generate entity proxies before deployment.
+    // but remember to generate entity proxies after deployment.
     proxyAutogenerate: ProxyFactory::AUTOGENERATE_ALWAYS,
     // For production, use `RedisAdapter`, for example.
     metadataCache: new ArrayAdapter(),

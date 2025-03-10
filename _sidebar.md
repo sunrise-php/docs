@@ -19,9 +19,9 @@
   * [Type Conversion](/docs/reference/type-conversion.md)
   * [Validator Constrains](/docs/reference/validator-constraints.md)
 * 📚 **Cookbook**
-  * [API Endpoint for Creating a User](/docs/cookbook/api-endpoint-for-creating-user.md)
   * [Custom Type Converter](/docs/cookbook/custom-type-converter.md)
   * [PSR-15 Controller](/docs/cookbook/psr-15-controller.md)
   * [PSR-15 Middleware](/docs/cookbook/psr-15-middleware.md)
   * [Typed Collection](/docs/cookbook/typed-collection.md)
+  * [User Sign In Operation](/docs/cookbook/user-sign-in-operation.md)
   * [Validator Integration](/docs/cookbook/validator-integration.md)

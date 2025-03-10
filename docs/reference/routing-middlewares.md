@@ -5,15 +5,13 @@
 **Part of the package**: [sunrise/recaptcha](/docs/packages/sunrise/recaptcha/)
 
 ```php
-use App\Dto\Auth\AuthLoginRequest;
 use Sunrise\Http\Router\Annotation\Middleware;
-use Sunrise\Http\Router\Annotation\RequestBody;
 use Sunrise\Recaptcha\Integration\Router\Middleware\RecaptchaChallengeMiddleware;
 
 final readonly class AuthController
 {
     #[Middleware(RecaptchaChallengeMiddleware::class)]
-    public function login(#[RequestBody] AuthLoginRequest $authLoginRequest): void
+    public function signIn(): void
     {
     }
 }
@@ -28,15 +26,13 @@ final readonly class AuthController
 > If you're using [Awesome Skeleton](/docs/packages/sunrise/awesome-skeleton/), this middleware is already applied.
 
 ```php
-use App\Dto\Page\PageCreateRequest;
 use Sunrise\Bridge\Doctrine\Integration\Router\Middleware\RequestTerminationMiddleware;
 use Sunrise\Http\Router\Annotation\Middleware;
-use Sunrise\Http\Router\Annotation\RequestBody;
 
 final readonly class PageController
 {
     #[Middleware(RequestTerminationMiddleware::class)]
-    public function create(#[RequestBody] PageCreateRequest $pageCreateRequest): void
+    public function create(): void
     {
     }
 }

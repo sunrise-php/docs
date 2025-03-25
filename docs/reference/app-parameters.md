@@ -120,6 +120,14 @@
 
 **Expected data type**: `list<string>`
 
+## doctrine.entity_manager_parameters.*.event_listeners :id=doctrine_entity_manager_parameters_event_listeners
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+**Recommended location**: `config/definitions/doctrine.php`
+
+**Expected data type**: `array<string, object>`
+
 ## doctrine.entity_manager_parameters.*.logger :id=doctrine_entity_manager_parameters_logger
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
@@ -127,6 +135,14 @@
 **Recommended location**: `config/definitions/doctrine.php`
 
 **Expected data type**: `\Psr\Log\LoggerInterface|null`
+
+# doctrine.entity_manager_parameters.*.middlewares :id=doctrine_entity_manager_parameters_middlewares
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+**Recommended location**: `config/definitions/doctrine.php`
+
+**Expected data type**: `list<\Doctrine\DBAL\Driver\Middleware>`
 
 ## doctrine.entity_manager_parameters.*.naming_strategy :id=doctrine_entity_manager_parameters_naming_strategy
 
@@ -184,6 +200,14 @@
 
 **Expected data type**: `list<string>`
 
+## doctrine.entity_manager_parameters.default.event_listeners :id=doctrine_entity_manager_parameters_default_event_listeners
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+**Recommended location**: `config/definitions/doctrine.php`
+
+**Expected data type**: `array<string, object>`
+
 ## doctrine.entity_manager_parameters.default.logger :id=doctrine_entity_manager_parameters_default_logger
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
@@ -191,6 +215,14 @@
 **Recommended location**: `config/definitions/doctrine.php`
 
 **Expected data type**: `\Psr\Log\LoggerInterface|null`
+
+# doctrine.entity_manager_parameters.default.middlewares :id=doctrine_entity_manager_parameters_default_middlewares
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+**Recommended location**: `config/definitions/doctrine.php`
+
+**Expected data type**: `list<\Doctrine\DBAL\Driver\Middleware>`
 
 ## doctrine.entity_manager_parameters.default.metadata_cache :id=doctrine_entity_manager_parameters_default_metadata_cache
 

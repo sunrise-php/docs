@@ -136,7 +136,7 @@
 
 **Expected data type**: `\Psr\Log\LoggerInterface|null`
 
-# doctrine.entity_manager_parameters.*.middlewares :id=doctrine_entity_manager_parameters_middlewares
+## doctrine.entity_manager_parameters.*.middlewares :id=doctrine_entity_manager_parameters_middlewares
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 
@@ -216,7 +216,7 @@
 
 **Expected data type**: `\Psr\Log\LoggerInterface|null`
 
-# doctrine.entity_manager_parameters.default.middlewares :id=doctrine_entity_manager_parameters_default_middlewares
+## doctrine.entity_manager_parameters.default.middlewares :id=doctrine_entity_manager_parameters_default_middlewares
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 

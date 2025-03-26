@@ -90,7 +90,7 @@ $containerBuilder->addDefinitions(
 
 - [doctrine.entity_manager_parameters.*.default_cache](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_cache)
 - [doctrine.entity_manager_parameters.*.entity_directories](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_entity_directories)
-- [doctrine.entity_manager_parameters.*.event_listeners](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_event_listeners)
+- [doctrine.entity_manager_parameters.*.event_subscribers](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_event_subscribers)
 - [doctrine.entity_manager_parameters.*.logger](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_logger)
 - [doctrine.entity_manager_parameters.*.middlewares](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_middlewares)
 - [doctrine.entity_manager_parameters.*.naming_strategy](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_naming_strategy)
@@ -100,7 +100,7 @@ $containerBuilder->addDefinitions(
 - [doctrine.entity_manager_parameters.default.default_cache](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_default_cache)
 - [doctrine.entity_manager_parameters.default.dsn](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_dsn)
 - [doctrine.entity_manager_parameters.default.entity_directories](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_entity_directories)
-- [doctrine.entity_manager_parameters.default.event_listeners](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_event_listeners)
+- [doctrine.entity_manager_parameters.default.event_subscribers](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_event_subscribers)
 - [doctrine.entity_manager_parameters.default.logger](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_logger)
 - [doctrine.entity_manager_parameters.default.middlewares](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_middlewares)
 - [doctrine.entity_manager_parameters.default.metadata_cache](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_metadata_cache)

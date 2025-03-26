@@ -120,7 +120,7 @@
 
 **Expected data type**: `list<string>`
 
-## doctrine.entity_manager_parameters.*.event_listeners :id=doctrine_entity_manager_parameters_event_listeners
+## doctrine.entity_manager_parameters.*.event_subscribers :id=doctrine_entity_manager_parameters_event_subscribers
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 
@@ -200,7 +200,7 @@
 
 **Expected data type**: `list<string>`
 
-## doctrine.entity_manager_parameters.default.event_listeners :id=doctrine_entity_manager_parameters_default_event_listeners
+## doctrine.entity_manager_parameters.default.event_subscribers :id=doctrine_entity_manager_parameters_default_event_subscribers
 
 **Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
 

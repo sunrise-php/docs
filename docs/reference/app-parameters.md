@@ -820,6 +820,22 @@
 
 **Expected data type**: `list<\Sunrise\Bridge\Doctrine\EntityManagerNameInterface>`
 
+## router.request_termination_middleware.validation_failed_error_message :id=router_request_termination_middleware_validation_failed_error_message
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+**Recommended location**: `config/definitions/doctrine.php`
+
+**Expected data type**: `string`
+
+## router.request_termination_middleware.validation_failed_error_status_code :id=router_request_termination_middleware_validation_failed_error_status_code
+
+**Part of the package**: [sunrise-studio/doctrine-bridge](/docs/packages/sunrise-studio/doctrine-bridge/)
+
+**Recommended location**: `config/definitions/doctrine.php`
+
+**Expected data type**: `int<100, 599>`
+
 ## router.request_variable_parameter_resolver.default_error_message :id=router_request_variable_parameter_resolver_default_error_message
 
 **Part of the package**: [sunrise/http-router](/docs/packages/sunrise/http-router/)

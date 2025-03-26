@@ -90,7 +90,9 @@ $containerBuilder->addDefinitions(
 
 - [doctrine.entity_manager_parameters.*.default_cache](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_cache)
 - [doctrine.entity_manager_parameters.*.entity_directories](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_entity_directories)
+- [doctrine.entity_manager_parameters.*.event_listeners](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_event_listeners)
 - [doctrine.entity_manager_parameters.*.logger](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_logger)
+- [doctrine.entity_manager_parameters.*.middlewares](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_middlewares)
 - [doctrine.entity_manager_parameters.*.naming_strategy](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_naming_strategy)
 - [doctrine.entity_manager_parameters.*.proxy_autogenerate](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_proxy_autogenerate)
 - [doctrine.entity_manager_parameters.*.proxy_directory](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_proxy_directory)
@@ -98,7 +100,9 @@ $containerBuilder->addDefinitions(
 - [doctrine.entity_manager_parameters.default.default_cache](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_default_cache)
 - [doctrine.entity_manager_parameters.default.dsn](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_dsn)
 - [doctrine.entity_manager_parameters.default.entity_directories](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_entity_directories)
+- [doctrine.entity_manager_parameters.default.event_listeners](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_event_listeners)
 - [doctrine.entity_manager_parameters.default.logger](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_logger)
+- [doctrine.entity_manager_parameters.default.middlewares](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_middlewares)
 - [doctrine.entity_manager_parameters.default.metadata_cache](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_metadata_cache)
 - [doctrine.entity_manager_parameters.default.name](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_name)
 - [doctrine.entity_manager_parameters.default.naming_strategy](/docs/reference/app-parameters.md#doctrine_entity_manager_parameters_default_naming_strategy)
@@ -120,6 +124,8 @@ $containerBuilder->addDefinitions(
 
 - [router.request_termination_middleware.flushable_entity_manager_names](/docs/reference/app-parameters.md#router_request_termination_middleware_flushable_entity_manager_names)
 - [router.request_termination_middleware.clearable_entity_manager_names](/docs/reference/app-parameters.md#router_request_termination_middleware_clearable_entity_manager_names)
+- [router.request_termination_middleware.validation_failed_error_message](/docs/reference/app-parameters.md#router_request_termination_middleware_validation_failed_error_message)
+- [router.request_termination_middleware.validation_failed_error_status_code](/docs/reference/app-parameters.md#router_request_termination_middleware_validation_failed_error_status_code)
 
 #### RequestedEntityParameterResolver Parameters
 

@@ -126,7 +126,7 @@
 
 **Recommended location**: `config/definitions/doctrine.php`
 
-**Expected data type**: `array<string, object>`
+**Expected data type**: `array<string, \Doctrine\Common\EventSubscriber>`
 
 ## doctrine.entity_manager_parameters.*.logger :id=doctrine_entity_manager_parameters_logger
 
@@ -206,7 +206,7 @@
 
 **Recommended location**: `config/definitions/doctrine.php`
 
-**Expected data type**: `array<string, object>`
+**Expected data type**: `array<string, \Doctrine\Common\EventSubscriber>`
 
 ## doctrine.entity_manager_parameters.default.logger :id=doctrine_entity_manager_parameters_default_logger
 

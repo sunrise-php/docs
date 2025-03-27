@@ -79,6 +79,7 @@ $entityManager = $entityManagerRegistry->getEntityManager();
 ```php
 $containerBuilder->addDefinitions(
     __DIR__ . '/../vendor/sunrise-studio/doctrine-bridge/resources/definitions/doctrine.php',
+    __DIR__ . '/../vendor/sunrise-studio/doctrine-bridge/resources/definitions/event_subscribers/entity_validation_on_pre_save.php',
     __DIR__ . '/../vendor/sunrise-studio/doctrine-bridge/resources/definitions/integration/hydrator/type_converters/map_entity_type_converter.php',
     __DIR__ . '/../vendor/sunrise-studio/doctrine-bridge/resources/definitions/integration/router/middlewares/request_termination_middleware.php',
     __DIR__ . '/../vendor/sunrise-studio/doctrine-bridge/resources/definitions/integration/router/parameter_resolvers/requested_entity_parameter_resolver.php',
